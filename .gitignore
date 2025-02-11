@@ -1,0 +1,39 @@
+# Ignorowanie wirtualnego środowiska
+venv/
+.env/
+.venv/
+
+pdf_projects/
+
+# Pliki cache Pythona
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pliki logów
+logs/
+*.log
+*.out
+*.err
+
+# Pliki konfiguracyjne IDE/editora
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Pliki tymczasowe systemowe
+.DS_Store
+Thumbs.db
+
+# Pliki zależności (opcjonalnie, jeśli używasz requirements.txt)
+Pipfile
+Pipfile.lock
+poetry.lock
+
+# Pliki bazy danych (jeśli aplikacja korzysta z SQLite)
+*.sqlite3
+*.db
+
+# Pliki środowiskowe
+.env
+*.env
