@@ -1,0 +1,368 @@
+1 Ogólne Warunki Ubezpieczenia Indywidualne terminowe ubezpieczenie na życie Informacje w zakresie Postanowienie 
+1. przesłanek wypłaty świadczenia art. 3, art. 6, art. 13, art. 14 
+2. ograniczeń oraz wyłączeń odpowiedzialności zakładu ubezpieczeń uprawniających do odmowy wypłaty świadczenia lub jego obniżenia art. 6, art. 14, art. 16, art. 17, art. 18 
+3. kosztów art. 11 Na Życie Informacja dotycząca umowy podstawowej Na Życie 2 Ogólne Warunki Ubezpieczenia Umowa podstawowa Komentarze i wyjaśnienia, które znajdują się w ramkach, nie są treścią Ogólnych Warunków Ubezpieczenia ( OWU ). Pełnią one jedynie funkcję informacyjną. Słowa wyróżnione kursywą są zdefiniowane na początku dokumentu. Wprowadziliśmy trzy rodzaje wyróżnień: 
+
+WAŻNE Zwracamy uwagę na kluczowe kwestie dotyczące Umowy. WYJAŚNIENIA Objaśniamy niektóre postanowienia Umowy oraz trudne sformułowania użyte w treści OWU. PRZYKŁADY Pokazujemy, jak w praktyce stosowane są postanowienia Umowy i jakie mają znaczenie dla osoby objętej ubezpieczeniem.
+
+
+Rozdział I.
+Postanowienia ogólne 
+
+Artykuł 1.
+Wstęp Niniejsze OWU mają zastosowanie do Umowy Indywidualne terminowe ubezpieczenie na życie zawartej pomiędzy Towarzystwem a Ubezpieczającym. Są one integralną częścią umowy ubezpieczenia i dokumentem wiążącym strony. 
+
+Artykuł 2.
+Definicje Definicje określeń użytych w niniejszych OWU : 
+1. biuro główne Towarzystwa – biuro NNLife TUnŻiR S.A. mieszczące się w Warszawie przy ul. Przemysłowej 26, 
+2. data opłacenia składki – dzień wpływu całej składki na rachunek bankowy wskazany przez Towarzystwo, 
+3. data wejścia w życie umowy podstawowej: 
+a) data rozpoczęcia ochrony ubezpieczeniowej wskazana przez Towarzystwo, to dzień następny po dacie opłacenia pierwszej składki, pod warunkiem wcześniejszego zawarcia Umowy – w przypadku, gdy Umowa jest zawierana w wyniku wstępnej oceny ryzyka lub 
+b) data rozpoczęcia ochrony ubezpieczeniowej wskazana w Szczegółowej Umowie Ubezpieczenia – w przypadku, gdy Umowa jest zawierana w wyniku pełnej analizy ryzyka, 
+4. daty wejścia w życie umowy dodatkowej: 
+a) w przypadku, gdy umowa dodatkowa zawierana jest wraz z zawarciem umowy podstawowej – jest to data wejścia w życie tożsama z datą wejścia w życie umowy podstawowej, 
+a) w przypadku, gdy umowa dodatkowa zawierana jest w terminie wymagalności składki - jest to data wejścia w życie umowy dodatkowej wskazana w Szczegółowej Umowie Ubezpieczenia, pod warunkiem opłacenia składki, 
+5. data wygaśnięcia – data wygaśnięcia umowy podstawowej lub umowy dodatkowej wskazana w Szczegółowej Umowie Ubezpieczenia, 
+6. data zawarcia Umowy – data doręczenia Ubezpieczającemu Szczegółowej Umowy Ubezpieczenia, z zastrzeżeniem postanowień określonych w artykule 7, 
+7. indeksacja – podwyższenie składki i sumy ubezpieczenia dokonywane przez Towarzystwo w rocznicę Umowy, na zasadach określonych w artykule 13, 
+8. ochrona tymczasowa – ochrona ubezpieczeniowa udzielana zgodnie z postanowieniami artykułu 6 osobie wskazanej we wniosku o zawarcie umowy ubezpieczenia jako Ubezpieczony, 
+9. okres prolongaty – okres 60 dni, rozpoczynający się dnia następującego po terminie wymagalności składki, jeśli nie została ona zapłacona w terminie i należnej wysokości. W okresie prolongaty Ubezpieczony lub Współubezpieczony są objęci ochroną ubezpieczeniową z tytułu Umowy. Okres prolongaty nie ma zastosowania do pierwszej składki, 
+10. OWU – Ogólne Warunki Ubezpieczenia, 
+11. reklamacja – każde wystąpienie Ubezpieczającego, Ubezpieczonego, Współubezpieczonego, Uposażonego lub uprawnionego z Umowy kierowane do Towarzystwa, w którym zgłasza zastrzeżenia dotyczące usług świadczonych przez Towarzystwo lub jego działalności, 
+12. rocznica Umowy – dzień każdego kolejnego roku obowiązywania Umowy, który datą odpowiada dacie wejścia w życie umowy podstawowej, 
+13. składka – kwota, jaką Ubezpieczający jest zobowiązany regularnie opłacać z tytułu Umowy, zgodnie z trybem jej opłacania. Jest ona określona w Szczegółowej Umowie Ubezpieczenia lub w stosownym załączniku. Obejmuje składkę za umowę podstawową oraz składki z tytułu umów dodatkowych, jeśli są zawarte, 
+14. suma ubezpieczenia – kwota wskazana w Szczegółowej Umowie Ubezpieczenia, która określa zobowiązanie Towarzystwa w przypadku zajścia zdarzenia ubezpieczeniowego, 
+15. Szczegółowa Umowa Ubezpieczenia (polisa) – dokument ubezpieczenia wystawiony przez Towarzystwo, potwierdzający zawarcie Umowy oraz objęcie ochroną ubezpieczeniową Ubezpieczonego lub Współubezpieczonego, zgodnie z wybranym przez Ubezpieczającego zakresem ochrony, 
+16. techniczna stopa procentowa – roczna stopa zwrotu z inwestycji założona do kalkulacji składki z tytułu umowy podstawowej, 
+17. termin wymagalności składki – dzień każdego kolejnego okresu obowiązywania Umowy, zgodnego z trybem opłacania składek, który dniem odpowiada dacie wejścia w życie umowy podstawowej, 
+
+WAŻNE: Jeżeli np. data wejścia w życie umowy podstawowej przypada 16 czerwca, wtedy termin wymagalności składki miesięcznej przypada odpowiednio 16 dnia każdego miesiąca. 
+
+18. Towarzystwo – NNLife Towarzystwo Ubezpieczeń na Życie i Reasekuracji Spółka Akcyjna (NNLife TUnŻiR S.A.) z siedzibą w Warszawie (00-450), przy ul. Przemysłowej 26, 
+19. Ubezpieczający – osoba fizyczna, osoba prawna lub jednostka organizacyjna nieposiadająca osobowości prawnej, która zawarła z Towarzystwem Umowę, 
+20. Ubezpieczony – osoba fizyczna wskazana w Szczegółowej Umowie Ubezpieczenia, której życie lub zdrowie jest przedmiotem Umowy, 
+
+WAŻNE: Zwracamy uwagę na różnicę pomiędzy Ubezpieczonym a Ubezpieczającym. Ubezpieczający to osoba (lub podmiot), która zawiera Umowę z Towarzystwem i jest zobowiązana do opłacania składek. Ubezpieczony to osoba fizyczna, której życie lub zdrowie jest chronione. Ubezpieczający i Ubezpieczony mogą być tą samą osobą.
+
+21. Umowa – umowa ubezpieczenia, na którą składają się postanowienia tych OWU, Szczegółowa Umowa Ubezpieczenia, umowy dodatkowe, załączone do umowy ubezpieczenia wszelkie zgodne oświadczenia woli Ubezpieczającego, Ubezpieczonego i Współubezpieczonego oraz Towarzystwa, które stanowią jej integralną część, 
+22. umowa dodatkowa – część Umowy, która zapewnia dodatkową ochronę ubezpieczeniową, 
+23. umowa podstawowa – Indywidualne terminowe ubezpieczenie na życie, 
+24. Uposażony – osoba wyznaczona na piśmie jako uprawniona do świadczeń na wypadek śmierci Ubezpieczonego lub Współubezpieczonego przewidzianych Umową, 
+25. wskaźnik indeksacji – wskaźnik stosowany przy indeksacji Umowy do podwyższenia składki z tytułu umowy podstawowej i składek z tytułu indeksowanych umów dodatkowych, określony w artykule 13, 
+26. Współubezpieczony – wskazana w Szczegółowej Umowie Ubezpieczenia osoba fizyczna, której życie lub zdrowie jest przedmiotem ubezpieczenia w ramach umowy dodatkowej, 
+27. zdarzenie ubezpieczeniowe – zdarzenie objęte ochroną ubezpieczeniową w ramach tej umowy podstawowej – śmierć Ubezpieczonego w okresie obowiązywania Umowy. 3 
+
+Rozdział II.
+Ochrona ubezpieczeniowa i jej zakres 
+
+Artykuł 3.
+Przedmiot i zakres ubezpieczenia 
+1. Przedmiotem tego ubezpieczenia jest ochrona życia Ubezpieczonego przez 24 godziny na dobę na całym świecie. 
+2. W przypadku śmierci Ubezpieczonego Towarzystwo wypłaci Uposażonemu Ubezpieczonego świadczenie w wysokości sumy ubezpieczenia, która obowiązuje w dniu śmierci Ubezpieczonego. 
+3. Towarzystwo wypłaci świadczenie z zastrzeżeniem postanowień zawartych w rozdziale VI. Ograniczenia i wyłączenia odpowiedzialności Towarzystwa. 
+4. Jeżeli świadczenie z tytułu Umowy będzie wypłacane Ubezpieczającemu, Towarzystwo pomniejszy wypłacaną kwotę o wymagalne składki, które wynikają z OWU. 
+
+Artykuł 4.
+Suma ubezpieczenia 
+1. Wysokość sumy ubezpieczenia na wypadek śmierci jest określona w Szczegółowej Umowie Ubezpieczenia. 
+2. Ubezpieczający w rocznicę Umowy może złożyć do Towarzystwa wniosek o zmianę wysokości sumy ubezpieczenia. W przypadku Umowy zawartej na cudzy rachunek Ubezpieczający może wnioskować o zmianę po uzyskaniu uprzedniej zgody Ubezpieczonego, o ile jest to zmiana na niekorzyść Ubezpieczonego. 
+
+WYJAŚNIENIE: Umowa zawarta na cudzy rachunek oznacza, że Ubezpieczający jest inną osobą niż Ubezpieczony.
+
+3. Zmiana sumy ubezpieczenia wymaga zgody Towarzystwa. Towarzystwo przedstawi pisemnie warunki zmiany sumy ubezpieczenia. 
+4. Postanowienia tego artykułu nie mają zastosowania do podwyższenia sumy ubezpieczenia na wypadek śmierci w wyniku indeksacji, opisanej w artykule 13 tych OWU. 
+5. Jeżeli zmiana sumy ubezpieczenia na wypadek śmierci nastąpiła po dacie zdarzenia ubezpieczeniowego, Towarzystwo wypłaci świadczenie w wysokości sumy ubezpieczenia, która obowiązuje w dniu śmierci Ubezpieczonego. 
+
+Artykuł 5.
+Okolicznościowe podwyższenie sumy ubezpieczenia 
+1. Ubezpieczający może jeden raz wnioskować o okolicznościowe podwyższenie sumy ubezpieczenia w umowie podstawowej, maksymalnie do 25% aktualnej sumy ubezpieczenia, w sytuacji: 
+a) urodzenia się dziecka Ubezpieczonego lub przysposobienia dziecka przez Ubezpieczonego, 
+b) śmierci małżonka Ubezpieczonego, 
+c) śmierci drugiego z rodziców dziecka Ubezpieczonego. 
+2. Zmiana sumy ubezpieczenia dla Ubezpieczonego wiąże się ze zmianą wysokości składki za Umowę. 
+3. Zmiana będzie obowiązywała od najbliższego terminu wymagalności składki po otrzymaniu skutecznego wniosku, pod warunkiem opłacenia zmienionej składki. 
+4. Wniosek o podwyższenie sumy ubezpieczenia musi zostać złożony w terminie 12 miesięcy od daty zdarzenia wymienionego w punkcie 
+1. Do wniosku należy dołączyć dokument, który potwierdzi to zdarzenie, tj. kopię skróconego aktu urodzenia dziecka lub orzeczenia sądu o przysposobieniu, lub kopię skróconego aktu zgonu małżonka Ubezpieczonego, lub kopię skróconego aktu zgonu drugiego z rodziców dziecka Ubezpieczonego. 
+5. Okolicznościowe podwyższenie sumy ubezpieczenia zostanie zrealizowane bez oceny stanu zdrowia Ubezpieczonego. 
+6. Postanowienia tego artykułu nie mają zastosowania do podwyższenia sumy ubezpieczenia w wyniku indeksacji, opisanej w artykule 13 tych OWU. 
+
+Artykuł 6.
+Ochrona tymczasowa 
+
+WYJAŚNIENIE: Towarzystwo zapewnia ochronę tymczasową z tytułu śmierci Ubezpieczonego wskutek NW w czasie rozpatrywania wniosku o zawarcie umowy ubezpieczenia, do czasu wystawienia polisy.
+
+1. Definicje: 
+a) nieszczęśliwy wypadek (NW) – niezależne od woli Ubezpieczonego, gwałtowne i nagłe zdarzenie wywołane przyczyną zewnętrzną, które zaszło w okresie obowiązywania ochrony tymczasowej. Zdarzenie nie może być związane z istniejącą u Ubezpieczonego chorobą, 
+b) pasażerskie licencjonowane linie lotnicze – przedsiębiorstwo transportu lotniczego, które posiada wszelkie zezwolenia uprawniające zarówno do regularnego, jak i na podstawie umowy czarteru, odpłatnego przewozu osób, 
+c) zawody z użyciem pojazdów kołowych – rywalizacja o charakterze indywidualnym lub zespołowym, która jest ukierunkowana na uzyskanie przez osoby uczestniczące optymalnych rezultatów z użyciem samochodu osobowego, samochodu ciężarowego, roweru, motoroweru, motocykla lub quada. 
+2. W przypadku śmierci Ubezpieczonego wskutek NW Towarzystwo wypłaci Uposażonemu Ubezpieczonego świadczenie w wysokości sumy ubezpieczenia z tytułu umowy podstawowej, która jest zadeklarowana we wniosku o zawarcie umowy ubezpieczenia, jednak nie więcej niż 100 000,00 zł. 
+3. Ochrona tymczasowa rozpoczyna się od dnia następnego po łącznym spełnieniu warunków: 
+a) podpisaniu przez Ubezpieczającego i Ubezpieczonego wniosku o zawarcie umowy ubezpieczenia lub potwierdzeniu przez Ubezpieczającego i Ubezpieczonego wniosku o zawarcie umowy ubezpieczenia w przypadku procesu zdalnego zawarcia umowy ubezpieczenia, pod warunkiem jego wpływu do Towarzystwa oraz 
+b) wpływie na rachunek Towarzystwa kwoty na poczet pierwszej składki z tytułu Umowy, z zastrzeżeniem, że wpłacona kwota nie może być niższa niż składka z tytułu Umowy zadeklarowana we wniosku o zawarcie umowy ubezpieczenia zgodnie z wybranym trybem płatności i została opłacona w sposób zgodny z wymogami Towarzystwa. 
+4. Ochrona tymczasowa kończy się we wcześniejszej z dat: 
+a) w dniu przed datą zawarcia Umowy lub 
+b) w dniu, kiedy Ubezpieczający złoży do Towarzystwa sprzeciw na piśmie, w przypadku, gdy treść Szczegółowej Umowy Ubezpieczenia zawiera postanowienia odbiegające od treści wniosku Ubezpieczającego o zawarcie umowy ubezpieczenia lub treści OWU, lub 
+c) w dniu, kiedy Towarzystwo nie wyrazi zgody na zawarcie Umowy, lub 
+d) w dniu, kiedy Towarzystwo otrzyma oświadczenie Ubezpieczającego o rezygnacji z zawarcia Umowy, lub 
+e) w dniu śmierci Ubezpieczonego w okresie obowiązywania ochrony tymczasowej, lub 
+f) po upływie 90 dni od daty podpisania przez Ubezpieczającego wniosku o zawarcie umowy ubezpieczenia. W przypadkach opisanych w punktach 
+b) -f) Towarzystwo zwróci Ubezpieczającemu wpłaconą do Towarzystwa kwotę na poczet pierwszej składki. 
+5. Towarzystwo nie wypłaci świadczenia z tytułu ochrony tymczasowej, jeżeli śmierć Ubezpieczonego nastąpiła w wyniku: 
+a) wypadku wynikłego z faktu pozostawania przez Ubezpieczonego w stanie po spożyciu alkoholu, leków, z wyjątkiem zażywanych zgodnie z zaleceniem lekarza, narkotyków lub innych substancji toksycznych, 
+b) samookaleczenia lub okaleczenia na prośbę Ubezpieczonego niezależnie od stanu jego poczytalności, 
+c) zdarzenia związanego z masowym skażeniem chemicznym, biologicznym lub radioaktywnym spowodowanym działaniem broni lub urządzenia wykorzystującego energię rozszczepienia jądrowego lub promieniotwórczość, 
+d) działań wojennych, czynnego udziału w aktach terroru lub masowych rozruchach społecznych, 
+e) obrażeń odniesionych na skutek usiłowania popełnienia lub popełnienia umyślnego przestępstwa, umyślnego udziału w innym czynie zabronionym lub stawiania oporu podczas aresztowania lub zatrzymania, 
+f) wykonywania czynności zawodowych właściwych wyłącznie dla osób pełniących służbę policyjną lub wojskową, bądź w jednostce pomocniczej lub cywilnej działającej w strukturach armii, albo w wyniku wykonywania pracy strażaka, strażnika gminnego (miejskiego), funkcjonariusza Straży Granicznej lub pełnienia służby w Ochotniczej Straży Pożarnej, 
+g) uprawiania sportów motorowych lub motorowodnych, uczestnictwa w rajdach samochodowych lub rajdach motocyklowych, jazdy motocyklem poza drogami w rozumieniu przepisów o ruchu drogowym, 
+h) uczestnictwa w zawodach z użyciem pojazdów kołowych, zawodach z użyciem łodzi lub nart wodnych lub zawodach konnych, 
+i) podróży jakimkolwiek statkiem powietrznym w charakterze pasażera lub innym, z wyjątkiem lotu w charakterze pasażera samolotem pasażerskich licencjonowanych linii lotniczych. 4 
+
+Rozdział III.
+Umowa ubezpieczenia 
+
+Artykuł 7.
+Zawarcie Umowy i początek odpowiedzialności Towarzystwa 
+1. Ochroną ubezpieczeniowa może zostać objęty Ubezpieczony, który w dacie wejścia w życie Umowy ukończył 18 rok życia i nie ukończył 71 roku życia. 
+2. Zawarcie Umowy przed ukończeniem 18 roku życia lub po ukończeniu 71 roku życia przez Ubezpieczonego jest bezskuteczne i nie rodzi żadnych zobowiązań po stronie Towarzystwa, z wyjątkiem obowiązku zwrotu otrzymanej składki. 
+3. Warunkiem zawarcia Umowy jest zaakceptowanie przez Towarzystwo : 
+a) wniosku o zawarcie umowy ubezpieczenia, złożonego przez Ubezpieczającego, 
+b) wymaganych przez Towarzystwo dokumentów, które są niezbędne do podjęcia decyzji o objęciu ochroną ubezpieczeniową Ubezpieczonego, a także Współubezpieczonego w ramach umów dodatkowych, jeśli Ubezpieczający o to wnioskuje. 
+4. W wyniku wstępnej oceny ryzyka otrzymany przez Towarzystwo wniosek może zostać zaakceptowany w dacie jego złożenia albo przekazany do pełnej analizy ryzyka. Towarzystwo ma prawo zaproponować odmienne warunki Umowy bądź odmówić zawarcia Umowy w oparciu o wyniki pełnej analizy ryzyka. Pośrednik ubezpieczeniowy informuje Ubezpieczającego o wyniku wstępnej oceny ryzyka. 
+5. W przypadku, gdy wniosek o zawarcie umowy ubezpieczenia zostanie zakwalifikowany do pełnej analizy ryzyka, warunkiem zawarcia Umowy jest dodatkowo opłacenie przez Ubezpieczającego kwoty na poczet pierwszej składki. 
+6. Ochrona ubezpieczeniowa rozpoczyna się: 
+a) następnego dnia po dacie opłacenia pierwszej składki, pod warunkiem wcześniejszego zawarcia Umowy – w przypadku, gdy Umowa jest zawierana w wyniku wstępnej oceny ryzyka lub 
+b) od daty wejścia w życie umowy podstawowej, pod warunkiem zawarcia Umowy – w przypadku, gdy Umowa jest zawierana w oparciu o wyniki pełnej analizy ryzyka. 
+
+WAŻNE : W przypadku, gdy Umowa jest zawierana w wyniku wstępnej oceny ryzyka, Ubezpieczony jest chroniony już od dnia następnego po dniu wpływu pierwszej składki na rachunek bankowy Towarzystwa. Prosimy o wpłacenie składki po zawarciu Umowy. W przypadku, gdy Umowa jest zawierana w wyniku pełnej analizy ryzyka, Ubezpieczony jest chroniony od daty wejścia w życie Umowy. Data wejścia w życie Umowy jest datą wskazaną przez Towarzystwo, od której Ubezpieczony jest chroniony. Natomiast data zawarcia Umowy jest datą doręczenia polisy Ubezpieczającemu.
+
+7. Umowa zostaje zawarta z datą doręczenia Ubezpieczającemu przez Towarzystwo Szczegółowej Umowy Ubezpieczenia, z zastrzeżeniem punktów 8-10. 
+8. W przypadku, gdy w wyniku oceny ryzyka Towarzystwo zaproponuje zawarcie Umowy na warunkach odmiennych od: 
+a) wskazanych we wniosku o zawarcie umowy ubezpieczenia lub 
+b) OWU, informację taką przekaże Ubezpieczającemu, dostarczając mu Szczegółową Umowę Ubezpieczenia uwzględniającą odmienne warunki. W takim przypadku Towarzystwo pisemnie zwróci uwagę na różnice. 
+
+WAŻNE: Towarzystwo ocenia ryzyko ubezpieczeniowe na podstawie wniosku o zawarcie ubezpieczenia. W niektórych przypadkach, ze względu na np. stan zdrowia Ubezpieczonego, Towarzystwo może zaproponować zmianę warunków Umowy, np. obniżenie sumy ubezpieczenia lub podwyższenie składki.
+
+9. W przypadku określonym w punkcie 8 
+a) Ubezpieczający ma prawo zgłosić sprzeciw w terminie 7 dni od doręczenia Szczegółowej Umowy Ubezpieczenia. Jeśli Ubezpieczający nie zgłosi sprzeciwu, Umowa zostanie zawarta następnego dnia po upływie tego terminu. 
+10. Jeżeli Ubezpieczający oświadczył, iż w rozumieniu Ustawy o przeciwdziałaniu praniu pieniędzy oraz finansowaniu terroryzmu jest: 
+a) osobą zajmującą eksponowane stanowisko polityczne lub 
+b) członkiem rodziny osoby zajmującej eksponowane stanowisko polityczne, lub 
+c) osobą znaną jako bliski współpracownik osoby zajmującej eksponowane stanowisko polityczne, (dalej PEP), to zawarcie Umowy wymaga zgody Członka Zarządu Towarzystwa, kadry kierowniczej wyższego szczebla lub osoby upoważnionej przez Zarząd Towarzystwa. 
+
+Artykuł 8.
+Zmiana Umowy na wniosek Ubezpieczającego 
+1. Umowa może być zmieniona na wniosek Ubezpieczającego pod warunkiem: 
+a) doręczenia Towarzystwu pisemnego wniosku Ubezpieczającego o zmianę, najpóźniej 60 dni przed rocznicą Umowy lub w innej formie zaakceptowanej przez strony oraz 
+b) wyrażenia zgody przez Towarzystwo na wnioskowaną zmianę, oraz 
+c) opłacenia przez Ubezpieczającego związanych z tym należnych składek w terminie ich wymagalności. 
+2. W przypadku Umowy zawartej na cudzy rachunek Ubezpieczający może wnioskować o zmianę po uzyskaniu uprzedniej zgody Ubezpieczonego lub Współubezpieczonego, o ile jest to zmiana na niekorzyść odpowiednio Ubezpieczonego lub Współubezpieczonego. 
+3. Dokument potwierdzający zmianę Umowy jest załącznikiem do Umowy. 
+
+PRZYKŁAD: Przykładową zmianą Umowy na wniosek Ubezpieczającego jest rozszerzenie ochrony ubezpieczeniowej poprzez zawarcie umowy dodatkowej.
+
+
+Artykuł 9.
+Prawa Ubezpieczającego wynikające z Umowy 
+1. Z zastrzeżeniem praw Ubezpieczonego, Współubezpieczonego lub Uposażonego określonych Umową oraz bezwzględnie obowiązującymi przepisami prawa wszelkie prawa z tytułu Umowy przysługują Ubezpieczającemu. 
+2. W przypadku śmierci Ubezpieczającego, który jest inną osobą niż Ubezpieczony, wszelkie jego prawa i obowiązki, które wynikają z Umowy, przechodzą na jego spadkobierców. 
+3. W przypadku ustania Ubezpieczającego, który jest osobą prawną lub jednostką organizacyjną nieposiadającą osobowości prawnej, wszelkie jego prawa i obowiązki wynikające z Umowy przechodzą na jego następców prawnych. 
+
+WYJAŚNIENIE: Określenie „ustanie Ubezpieczającego, który jest osobą prawną lub jednostką organizacyjną nieposiadającą osobowości prawnej” oznacza np. likwidację, upadłość, rozwiązanie spółki.
+
+
+Artykuł 10.
+Cesja praw z Umowy Przeniesienie praw z Umowy (cesja) wymaga pisemnej zgody Towarzystwa. Towarzystwo nie odpowiada za skuteczność cesji w stosunkach pomiędzy cedentem i cesjonariuszem. 
+
+Artykuł 11.
+Duplikat Szczegółowej Umowy Ubezpieczenia 
+1. W przypadku zagubienia bądź zniszczenia Szczegółowej Umowy Ubezpieczenia Towarzystwo, na wniosek Ubezpieczającego, wydaje duplikat dokumentu ubezpieczenia. 
+2. Z dniem wydania duplikatu oryginał Szczegółowej Umowy Ubezpieczenia traci swoją ważność. 5 
+
+Rozdział IV.
+Składka 
+
+Artykuł 12.
+Opłacanie składek 
+1. Składkę ustala Towarzystwo z uwzględnieniem: 
+a) zakresu oraz wysokości udzielanej ochrony ubezpieczeniowej, 
+b) wyłączeń i ograniczeń odpowiedzialności Towarzystwa i okresów odroczenia odpowiedzialności, 
+c) okresu ubezpieczenia, 
+d) technicznej stopy procentowej, 
+e) wyniku indywidualnej oceny poziomu ryzyka ubezpieczeniowego osoby, która ma być objęta ochroną ubezpieczeniową, w tym wieku oraz wykonywanej pracy, 
+f) opłat i kosztów zawarcia i obsługi Umowy. 
+2. Składka może być opłacana w trybie rocznym lub miesięcznym po wcześniejszym uzgodnieniu przez strony Umowy. Na wniosek Ubezpieczającego oraz za zgodą Towarzystwa w trakcie obowiązywania Umowy może nastąpić zmiana trybu opłacania składek. 
+3. Minimalna składka z tytułu Umowy to 50 zł przy miesięcznym trybie opłacania lub 570 zł w przypadku rocznego trybu opłacania. Wyjątkiem jest sytuacja, gdy wysokość składki zmienia się w przypadku wygaśnięcia którejkolwiek umowy dodatkowej z powodu: 
+a) powstania obowiązku wypłaty świadczenia z tytułu umowy dodatkowej lub 
+b) wygaśnięcia umowy dodatkowej z powodu wieku Ubezpieczonego lub Współubezpieczonego wskazanego w OWU umowy dodatkowej, lub 
+c) śmierci Współubezpieczonego, lub 
+d) niezaakceptowania przez Ubezpieczającego zmienionych warunków umowy dodatkowej po upływie 5-letniego okresu wskazanego w OWU umowy dodatkowej, lub 
+e) automatycznego obniżania składki w umowie dodatkowej Dodatkowe ubezpieczenie na życie z malejącą sumą ubezpieczenia i składką. 
+4. Ubezpieczający zobowiązany jest do zapłaty Towarzystwu składki z góry w wysokości i trybie określonych w Szczegółowej Umowie Ubezpieczenia. 
+5. Począwszy od drugiej należnej składki, Ubezpieczającemu, który nie opłaci składki w terminie wymagalności, przysługuje dodatkowy 60-dniowy okres prolongaty, liczony od terminu wymagalnośc i składki. 
+6. W przypadku gdy Ubezpieczający nie opłaci składki w terminie wymagalności, Towarzystwo wezwie Ubezpieczającego do opłacenia składki i poinformuje o skutkach jej nieopłacenia. 
+7. W przypadku nieopłacenia składki Umowa i ochrona ubezpieczeniowa wygasną z upływem okresu prolongaty, lecz nie wcześniej niż dnia następnego po upływie 7 dni od daty otrzymania wezwania, o którym mowa w punkcie 6 powyżej. 
+8. Za okres prolongaty Ubezpieczający zobowiązany jest do opłacenia składki. 
+9. Towarzystwo nie ma obowiązku wysyłania Ubezpieczającemu druków / formularzy do opłacania składek. Składka powinna być opłacona przez Ubezpieczającego niezależnie od otrzymania druków / formularzy. 
+
+Artykuł 13.
+Indeksacja 
+
+WYJAŚNIENIE: Umowa jest indeksowana od pierwszej rocznicy Umowy. Wpłacenie zindeksowanej składki powoduje podwyższenie sum ubezpieczenia.
+
+1. W rocznicę Umowy Towarzystwo dokonuje automatycznej indeksacji, o ile Ubezpieczający wyraził na to zgodę przed zawarciem Umowy we wniosku o zawarcie umowy ubezpieczenia. 
+2. Indeksacja dokonywana jest w oparciu o wskaźnik indeksacji, który będzie zatwierdzany każdego roku przez Towarzystwo do dnia 30 września. Wskaźnik indeksacji będzie stosowany do Umów, których rocznica przypada w okresie pomiędzy dniem 1 grudnia danego roku a dniem 30 listopada następnego roku. Jeżeli wskaźnik inflacji jest mniejszy od 3%, wówczas wskaźnik indeksacji wynosi 3%. W przeciwnym wypadku wskaźnik indeksacji jest równy wskaźnikowi inflacji zaokrąglonemu do pełnego procenta w górę. Wskaźnik inflacji oznacza wskaźnik wzrostu cen towarów i usług konsumpcyjnych w okresie poprzedzających dwunastu miesięcy, tj. od 1 września poprzedniego roku do 31 sierpnia danego roku, ogłaszany przez Prezesa Głównego Urzędu Statystycznego. W razie zaniechania ogłaszania powyższego wskaźnika inflacji Towarzystwo stosować będzie inny procentowy wskaźnik określający wzrost cen towarów i usług konsumpcyjnych w tym samym okresie, ogłaszany przez właściwy organ lub instytucję państwową. 
+3. Jeżeli Ubezpieczający nie wyraził zgody na automatyczną indeksację składki przed zawarciem Umowy, może on złożyć do Towarzystwa wniosek o wprowadzenie indeksacji w trakcie trwania Umowy, każdorazowo nie później niż na 30 dni przed dniem rocznicy Umowy, od której zmiana ta miałaby obowiązywać. Po zaakceptowaniu tego wniosku Towarzystwo dokonuje automatycznej indeksacji w każdą rocznicę Umowy. 
+4. Na 30 dni przed każdą rocznicą Umowy do Ubezpieczającego zostanie wysłany list informujący o nowych wartościach sumy ubezpieczenia, składki i wskaźnika indeksacji. 
+5. Ubezpieczający może zrezygnować z indeksacji, składając do Towarzystwa stosowny wniosek o anulowanie indeksacji, każdorazowo nie później niż 14 dni przed rocznicą Umowy, od której zmiana ta miałaby obowiązywać. 
+6. Indeksacja nie będzie dokonywana w przypadku, gdy Towarzystwo przejęło obowiązek opłacania składek. 
+7. W odniesieniu do umowy podstawowej indeksacja powoduje podwyższenie składki z tytułu tej umowy o wskaźnik indeksacji, natomiast nowa podwyższona suma ubezpieczenia umowy podstawowej jest kalkulowana w oparciu o wzrost składki z tytułu tej umowy, poziom ryzyka ubezpieczeniowego, aktualny wiek Ubezpieczonego oraz okres, jaki pozostał do daty wygaśnięcia umowy podstawowej. 
+
+Rozdział IV.
+Wypłata świadczenia i Uposażony 
+
+Artykuł 14.
+Zgłoszenie roszczenia i wypłata świadczenia z tytułu śmierci Ubezpieczonego 
+
+WYJAŚNIENIE: Zdarzenie ubezpieczeniowe można zgłosić do Towarzystwa w wybrany sposób:
+
+• przez portal e-roszczenie : www.eroszczenie.nn.pl,
+• telefonicznie : +48 22 523 50 70 (koszt połączenia zgodnie z taryfą operatora),
+• pisemnie na adres : NNLife TUnŻiR S.A., Dział Roszczeń, ul. Przemysłowa 26, 00-450 Warszawa,
+• osobiście : w jednym z biur sprzedaży Towarzystwa (adresy biur znajdują się na stronie internetowej Towarzystwa www.nnlife.pl/zycie). 
+1. Informacje o wymaganych dokumentach i możliwościach ich poświadczania znajdują się na stronie internetowej Towarzystwa. 
+2. W terminie 7 dni od daty otrzymania informacji o zdarzeniu ubezpieczeniowym Towarzystwo poinformuje osobę zgłaszającą roszczenie o wymaganych dokumentach określonych w punkcie 3 poniżej. 
+3. Do ustalenia prawa osoby zgłaszającej roszczenie do świadczenia niezbędne jest przekazanie Towarzystwu dokumentów: 
+a) w przypadku naturalnej śmierci Ubezpieczonego osoba uprawniona do świadczenia składa: – odpis skrócony aktu zgonu w oryginale lub kopię poświadczoną za zgodność z oryginałem przez notariusza lub osoby upoważnione w jednym z biur sprzedaży Towarzystwa, lub organ wydający dokument, – wypełniony wniosek o wypłatę świadczenia – na formularzu Towarzystwa lub w formie pisemnego wniosku, który będzie zawierał dane wskazane na formularzu Towarzystwa, – kopię karty statystycznej do karty zgonu lub kopię dokumentacji medycznej potwierdzającą przyczynę zgonu Ubezpieczonego, – kopię dokumentu tożsamości każdego z Uposażonych / spadkobierców lub potwierdzenie tożsamości przez agenta wyłącznego (czyli osoby fizycznej wykonującej czynności agencyjne bezpośrednio w imieniu i na rzecz Towarzystwa), notariusza, organ wydający dokument, zgodnie z ustawą o przeciwdziałaniu praniu pieniędzy oraz finansowaniu terroryzmu. W przypadku osób, które przebywają poza granicami kraju, tożsamość może potwierdzić ambasador lub konsul RP, – w przypadku zgonu Uposażonego – odpis skrócony aktu zgonu Uposażonego w oryginale lub kopię poświadczoną za zgodność z oryginałem przez notariusza lub w jednym z biur sprzedaży Towarzystwa, lub organ wydający dokument, 
+b) w przypadku śmierci Ubezpieczonego wskutek NW osoba uprawniona do świadczenia dodatkowo składa: – kopię dokumentacji dotyczącej okoliczności i przebiegu zdarzenia, sporządzonej przez organy policji, prokuratury, kopię wyroku sądu, a w razie ich braku wskazanie adresów 6 i numerów spraw jednostek policji, prokuratury lub sądu, które prowadziły lub prowadzą postępowanie w sprawie, – kopię protokołu powypadkowego sporządzonego przez pracodawcę – w przypadku wypadku w pracy, – kopię innych dokumentów potwierdzających okoliczności wypadku. 
+4. Na podstawie otrzymanych dokumentów Towarzystwo potwierdzi uprawnienia osoby zgłaszającej roszczenie do świadczenia z tytułu Umowy. 
+5. Jeśli potrzebne będą dodatkowe dokumenty, Towarzystwo poinformuje o tym niezwłocznie osobę zgłaszającą roszczenie. 
+6. Towarzystwo ma prawo też żądać oryginalnych dokumentów lub kopii poświadczonych za zgodność z oryginałem. Za zgodność z oryginałem dokumenty mogą poświadczyć: notariusz lub osoby upoważnione w biurach sprzedaży Towarzystwa, lub organ, który wydał dokument. 
+7. Dokumentacja dotycząca zdarzenia ubezpieczeniowego, które miało miejsce poza granicami Polski, musi być przetłumaczona na język polski przez tłumacza przysięgłego na koszt osoby, która zgłasza roszczenie. 
+8. Towarzystwo zastrzega sobie prawo do weryfikacji dostarczonej dokumentacji oraz zasięgania dodatkowych opinii specjalistów, jeśli jest ona niekompletna lub informacje w niej zawarte wymagają potwierdzenia. 
+9. Towarzystwo może wystąpić z wnioskiem do policji, prokuratury, sądu, placówek medycznych i innych instytucji publicznych o dodatkowe informacje dotyczące okoliczności zdarzenia ubezpieczeniowego, o czym poinformuje osobę uprawnioną do świadczenia. 
+10. Towarzystwo zobowiązuje się wypłacić świadczenie w terminie 30 dni, licząc od daty otrzymania powiadomienia o zdarzeniu ubezpieczeniowym. 
+11. Gdyby 
+
+wyjaśnienie w powyższym terminie okoliczności koniecznych do ustalenia odpowiedzialności Towarzystwa albo wysokości świadczenia okazało się niemożliwe, świadczenie powinno być wypłacone w ciągu 14 dni, licząc od dnia, w którym przy zachowaniu należytej staranności wyjaśnienie tych okoliczności było możliwe. Jednakże bezsporną część świadczenia Towarzystwo powinno wypłacić w 30-dniowym terminie wskazanym w punkcie 10 powyżej.
+
+12. Jeżeli osoba zgłaszająca roszczenie nie przedstawiła wymaganych dokumentów, które są niezbędne do ustalenia zasadności i wysokości świadczenia, Towarzystwo może odmówić wypłaty świadczenia. 
+13. Jeżeli świadczenie nie przysługuje, Towarzystwo powiadomi o tym pisemnie osoby uprawnione do świadczenia, uzasadniając odmowę, w terminach określonych w punktach 10 i 11 powyżej. 
+
+Artykuł 15.
+Wskazanie i zmiana Uposażonego 
+
+WAŻNE: Uposażonym może być dowolna osoba i wskazuje ją Ubezpieczony i Współubezpieczony. Świadczenie z tytułu śmierci Ubezpieczonego i Współubezpieczonego nie podlega podatkowi od spadków i darowizn.
+
+1. W przypadku każdej umowy, również zawartej na cudzy rachunek, Ubezpieczony i Współubezpieczony mają prawo do samodzielnego wskazania i zmiany Uposażonego przez doręczenie do Towarzystwa pisemnego oświadczenia. 
+2. Zmiana Uposażonego następuje pod warunkiem otrzymania przez Towarzystwo skutecznego oświadczenia, o którym mowa w punkcie 1 powyżej, w sposób umożliwiający zapoznanie się z jego treścią. 
+3. Jeżeli Uposażony zmarł przed śmiercią odpowiednio Ubezpieczonego lub Współubezpieczonego albo umyślnie przyczynił się do jego śmierci, wskazanie Uposażonego staje się bezskuteczne. 
+4. Jeżeli w chwili śmierci odpowiednio Ubezpieczonego lub Współubezpieczonego nie ma osoby Uposażonego, świadczenie na wypadek śmierci należne z tytułu Umowy przypada spadkobiercom ustawowym odpowiednio Ubezpieczonego lub Współubezpieczonego w częściach, w jakich po nich dziedziczą. 
+
+Rozdział VI.
+Ograniczenia i wyłączenia odpowiedzialności Towarzystwa 
+
+WAŻNE: Prosimy o zwrócenie szczególnej uwagi na przypadki, w których Towarzystwo może odmówić wypłaty świadczenia.
+
+
+Artykuł 16.
+Samobójstwo 
+1. W przypadku samobójstwa Ubezpieczonego (niezależnie od stanu jego poczytalności) popełnionego w okresie pierwszych 2 lat od daty zawarcia Umowy, Towarzystwo wypłaci spadkobiercom Ubezpieczonego sumę zapłaconych składek z tytułu śmierci Ubezpieczonego z umowy podstawowej. W sytuacji, gdy Ubezpieczony jest inną osobą niż Ubezpieczający, ta kwota zostanie wypłacona Ubezpieczającemu. 
+2. W przypadku samobójstwa Ubezpieczonego popełnionego po upływie 2 lat od daty zawarcia Umowy, Towarzystwo wypłaci Uposażonemu Ubezpieczonego świadczenie w wysokości sumy ubezpieczenia na wypadek śmierci wskazanej w Szczegółowej Umowie Ubezpieczenia. 
+
+Artykuł 17.
+Zatajenie informacji 
+1. Jeżeli Ubezpieczający, Ubezpieczony lub Współubezpieczony podali dane niezgodne z prawdą lub zataili prawdę o okolicznościach, o które pytało Towarzystwo przy zawieraniu Umowy i okoliczności te pozostają w związku przyczynowym ze zgłoszonym zdarzeniem ubezpieczeniowym, Towarzystwo będzie wolne od odpowiedzialności, z zastrzeżeniem bezwzględnie obowiązujących przepisów prawa. 
+2. Jeżeli do zdarzenia ubezpieczeniowego doszło po upływie 3 lat od daty zawarcia Umowy, Towarzystwo nie będzie mogło podnieść zarzutu oświadczenia niezgodnego z prawdą albo zatajającego prawdę. 
+
+Artykuł 18.
+Wyłączenia odpowiedzialności Towarzystwa Towarzystwo nie wypłaci świadczenia z tytułu umowy podstawowej, jeżeli śmierć Ubezpieczonego nastąpiła w wyniku działań wojennych, czynnego udziału w aktach terroru lub masowych rozruchach społecznych. 
+
+Rozdział VI.
+Wygaśnięcie Umowy 
+
+WYJAŚNIENIE: Ubezpieczający ma możliwość rezygnacji z Umowy w każdym momencie jej obowiązywania. Powoduje to wygaśnięcie ochrony ubezpieczeniowej.
+
+
+Artykuł 19.
+Odstąpienie od Umowy 
+1. Ubezpieczający ma prawo odstąpić od Umowy w terminie 30 dni, licząc od daty jej zawarcia, a w przypadku gdy Ubezpieczający jest przedsiębiorcą, w terminie 7 dni, licząc od daty jej zawarcia. 
+2. Odstąpienie od Umowy następuje na podstawie pisemnego wniosku doręczonego Towarzystwu lub w innej formie zaakceptowanej przez strony. 
+3. W przypadku odstąpienia od Umowy Towarzystwo zwróci Ubezpieczającemu zapłaconą składkę. Towarzystwo zastrzega sobie prawo potrącenia części składki za okres, w którym udzielało ochrony ubezpieczeniowej. 
+4. Zwrot nastąpi w terminie 30 dni od daty otrzymania przez Towarzystwo pisemnego wniosku Ubezpieczającego o odstąpieniu od Umowy. 
+
+Artykuł 20.
+Rozwiązanie Umowy 7 
+1. Ubezpieczający może w dowolnym momencie obowiązywania Umowy wypowiedzieć Umowę. 
+2. Rozwiązanie Umowy następuje na podstawie pisemnego wniosku doręczonego Towarzystwu lub w innej formie zaakceptowanej przez strony. 
+3. Rozwiązanie Umowy jest skuteczne z końcem okresu, za jaki została opłacona ostatnia składka. 
+
+Artykuł 21.
+Wygaśnięcie Umowy 
+1. Umowa wygasa: 
+a) w dniu śmierci Ubezpieczonego lub 
+b) z datą wygaśnięcia umowy podstawowej, lub 
+c) z dniem rozwiązania Umowy zgodnie z artykułem 20, lub 
+d) z powodu nieopłacenia składki, zgodnie z artykułem 12 punkt 7, lub 
+e) z końcem okresu, za jaki została opłacona ostatnia składka, w przypadku otrzymania skutecznego wniosku Ubezpieczającego, skutkującego obniżeniem składki do poziomu poniżej limitu określonego w artykule 12 punkt 3, o czym Towarzystwo poinformuje Ubezpieczającego przed dokonaniem zmiany. 
+2. Z zastrzeżeniem bezwzględnie obowiązujących przepisów prawa Umowa może przewidywać inne zdarzenia, z powodu których wygaśnie. 
+
+Rozdział VII.
+Postanowienia końcowe 
+
+Artykuł 22.
+Postanowienia kolizyjne Z zastrzeżeniem bezwzględnie obowiązujących przepisów prawa w przypadku sprzeczności pomiędzy postanowieniami tych OWU a postanowieniami Szczegółowej Umowy Ubezpieczenia rozstrzygają postanowienia tej ostatniej. 
+
+Artykuł 23.
+Należności, opłaty, podatki 
+1. Należności, opłaty i podatki związane z opłacaniem składek obciążają Ubezpieczającego i są uiszczane wraz z odpowiednią składką. 
+2. Należności, opłaty i podatki związane z wypłatą świadczeń obciążają osoby uprawnione do tych świadczeń i są uiszczane najpóźniej w dniu zapłaty świadczenia przez Towarzystwo. 
+3. Wszelkie podatki związane z Umową powinny być uiszczane zgodnie z prawem podatkowym obowiązującym w dniu powstania obowiązku podatkowego. W dacie wejścia w życie tych OWU są to przepisy dotyczące podatków dochodowych od osób fizycznych i prawnych, tj. Ustawa z 
+26.
+07.1991 o podatku dochodowym od osób fizycznych i Ustawa z 
+15.
+02.1992 o podatku dochodowym od osób prawnych. 
+
+Artykuł 24.
+Doręczenia 
+1. Zawiadomienia, oświadczenia i wnioski Ubezpieczającego, Ubezpieczonego, Współubezpieczonego lub Uposażonego związane z Umową powinny być przekazywane do Towarzystwa pisemnie lub w innej formie zaakceptowanej przez strony. 
+2. Korespondencja Towarzystwa odpowiednio do Ubezpieczającego, Ubezpieczonego, Współubezpieczonego lub Uposażonego będzie wysyłana pisemnie pod ostatni wskazany adres Ubezpieczającego, Ubezpieczonego, Współubezpieczonego lub Uposażonego, lub w innej formie zaakceptowanej przez strony. 
+
+Artykuł 25.
+Reklamacje i mediacja 
+1. Ubezpieczający, Ubezpieczony, Współubezpieczony, Uposażony lub uprawniony z Umowy może złożyć reklamację : 
+a) pisemnie na adres: NNLife TUnŻiR S.A., ul. Przemysłowa 26, 00-450 Warszawa, 
+b) na adres e-mail: lifeinfo@nn.pl, 
+c) telefonicznie: +48 22 523 50 70 (koszt połączenia zgodnie z taryfą operatora), 
+d) osobiście: w jednym z biur sprzedaży Towarzystwa (adresy biur znajdują się na stronie internetowej Towarzystwa ). 
+2. Każda reklamacja złożona zgodnie z punktem 1 będzie rozpatrywana niezwłocznie, nie później niż w terminie 30 dni od daty jej otrzymania. 
+3. W szczególnie skomplikowanych przypadkach, kiedy nie będzie możliwe rozpatrzenie reklamacji i udzielenie odpowiedzi w terminie wskazanym w punkcie 2, odpowiedź będzie przesłana nie później niż w terminie 60 dni od daty otrzymania reklamacji. W takim przypadku Towarzystwo poinformuje niezwłocznie składającego reklamację o przyczynie opóźnienia, okolicznościach, które dodatkowo musi ustalić, oraz przewidywanym czasie udzielenia odpowiedzi. 
+
+WYJAŚNIENIE: Skomplikowane przypadki to takie, w których będzie konieczne ustalenie dodatkowych okoliczności i zebranie brakujących informacji niezbędnych dla rozpatrzenia reklamacji.
+
+4. O ile składający reklamację nie złoży wniosku o dostarczenie odpowiedzi pocztą elektroniczną na wskazany adres e-mail, odpowiedź na reklamację zostanie udzielona przez Towarzystwo pisemnie, niezależnie od sposobu zgłoszenia reklamacji. 
+5. „Polityka rozpatrywania reklamacji” jest dostępna na stronie internetowej Towarzystwa. 
+6. Osoba fizyczna, która jest Ubezpieczającym, Ubezpieczonym, Współubezpieczonym, Uposażonym lub uprawnionym z Umowy, może zwrócić się w sprawie reklamacji do Rzecznika Finansowego lub o udzielenie pomocy do miejskich i powiatowych rzeczników konsumenta. 
+7. Towarzystwo zgadza się na udział w postępowaniu w sprawie pozasądowego rozwiązywania sporów konsumenckich przed Rzecznikiem Finansowym – http://www.rf.gov.pl/ lub Sądem Polubownym przy Komisji Nadzoru Finansowego – http://www.knf.gov.pl. 
+
+Artykuł 26.
+Prawo właściwe, właściwość sądów, sprawozdania 
+1. Prawem właściwym dla Umowy jest prawo obowiązujące w Polsce. 
+2. Wszelkie spory mogące wyniknąć z Umowy lub z nią związane pomiędzy Towarzystwem a odpowiednio Ubezpieczającym, Ubezpieczonym, Współubezpieczonym, Uposażonym lub uprawnionym z Umowy będą rozstrzygane przez sąd właściwy według przepisów o właściwości ogólnej albo przez sąd właściwy dla miejsca zamieszkania lub siedziby Ubezpieczającego, Ubezpieczonego, Współubezpieczonego, Uposażonego lub uprawnionego z Umowy. 
+3. Powództwo o roszczenie wynikające z Umowy można wytoczyć według przepisów o właściwości ogólnej albo przed sąd właściwy dla miejsca zamieszkania spadkobiercy Ubezpieczonego, Współubezpieczonego lub spadkobiercy uprawnionego z Umowy. 
+4. Działalność Towarzystwa podlega nadzorowi Komisji Nadzoru Finansowego. 
+5. Roczne sprawozdania o wypłacalności i kondycji finansowej Towarzystwa publikowane są na stronie internetowej Towarzystwa po zakończeniu roku sprawozdawczego. 
+6. Komunikacja z Towarzystwem odbywa się w języku polskim. 
+
+Artykuł 27.
+Aktualizacja informacji 
+
+WAŻNE: Prosimy o informowanie na bieżąco o wszelkich zmianach danych osobowych. Aktualizacja danych umożliwi terminowe dostarczanie informacji dotyczących Umowy i usprawni jej obsługę.
+
+1. Ubezpieczający, Ubezpieczony i Współubezpieczony są zobowiązani do niezwłocznego informowania Towarzystwa o zmianach swoich danych osobowych i kontaktowych. 8 PA450-D22 NNLife Towarzystwo Ubezpieczeń na Życie i Reasekuracji Spółka Akcyjna (NNLife TUnŻiR S.A., dalej jako Towarzystwo), ul. Przemysłowa 26, 00-450 Warszawa, zarejestrowane przez Sąd Rejonowy dla m.st. Warszawy, XII Wydział Gospodarczy Krajowego Rejestru Sądowego, pod nr. KRS 0000028131; NIP 526-030-50-06; wysokość kapitału zakładowego: 
+21.
+490.000,00 złotych, wpłacony w całości, działające na podstawie zezwolenia Ministra Finansów z dnia 30 października 1990 roku. NNLife TUnŻiR S.A. podlega nadzorowi Komisji Nadzoru Finansowego. NNLife TUnŻiR S.A. jest spółką z Grupy NN. Strona internetowa Towarzystwa: www.nnlife.pl/zycie, Telefoniczne Centrum Informacji: tel. +48 22 523 50 70, e-mail: lifeinfo@nn.pl W przypadkach uzasadnionych przepisami prawa Towarzystwo może poprosić o dokument tożsamości Ubezpieczającego, Ubezpieczonego, Współubezpieczonego w celu weryfikacji jego tożsamości oraz zmienionych danych osobowych. Ubezpieczający, który jest osobą fizyczną, jest zobowiązany do niezwłocznego poinformowania Towarzystwa o zajęciu lub zaprzestaniu zajmowania stanowiska PEP w rozumieniu Ustawy o przeciwdziałaniu praniu pieniędzy oraz finansowaniu terroryzmu pod rygorem odpowiedzialności karnej za złożenie fałszywego oświadczenia. 
+2. Ubezpieczający zobowiązany jest do niezwłocznego poinformowania Towarzystwa o zmianie formy prawnej, zakresu prowadzonej działalności oraz zmianie kraju siedziby w celu wykonania przez Towarzystwo obowiązków wynikających z Ustawy o przeciwdziałaniu praniu pieniędzy oraz finansowaniu terroryzmu. 
+
+Artykuł 28.
+Pełnomocnictwa Pełnomocnictwa do dokonywania czynności w związku z Umową powinny być sporządzone wyłącznie w formie pisemnej. Warszawa, 2 sierpnia 2022 Justyna Dymek Członek Zarządu Towarzystwa Agata Lem-Kulig Członek Zarządu Towarzystwa 

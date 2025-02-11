@@ -11,9 +11,13 @@ dependencies = [
     "torch>=2.2.0",
     "transformers>=4.37.2",
     "numpy>=1.24.0",
-    "requests>=2.31.0"
+    "requests>=2.31.0",
+    "pathlib (>=1.0.1,<2.0.0)",
+    "setuptools (>=75.8.0,<76.0.0)",
+    "matplotlib (>=3.10.0,<4.0.0)"
 ]
-
+[tool.poetry.scripts]
+metrics = "scripts.test_document_quality:main"
 [tool.poetry]
 packages = [
     { include = "src" }
