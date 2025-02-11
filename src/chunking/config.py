@@ -13,8 +13,6 @@ SECTION_PATTERNS = {
     'ustep': r'^(?:Ust\.|Ust\s*\.|Ustęp|U\.|U|Punkt|Pkt\.|Pkt|Pkt\s*\.)\s*(?:[IVXLCDM]+|\d+)\.?',
     'zalacznik': r'^(?:Zał\.|Zał\s*\.|Załącznik|Za[łl]|Z\.|Z)\s*(?:[IVXLCDM]+|\d+)\.?',
     'sekcja': r'^(?:Sekcja|Sek\.|Sek|S\.|S)\s*(?:[IVXLCDM]+|\d+)\.?',
-    'owu': r'^(?:OWU|Ogólne\s*Warunki\s*Umowy|Ogólne\s*Warunki\s*Ubezpieczenia)\s*(?:[IVXLCDM]+|\d+)\.?',
-    'definicje': r'^(?:Definicje|Def\.|Def)\s*(?:[IVXLCDM]+|\d+)\.?',
     'postanowienia': r'^(?:Postanowienia\s*(?:Ogólne|Szczegółowe|Końcowe)|Post\.|Post)\s*(?:[IVXLCDM]+|\d+)\.?'
 }
 
@@ -24,7 +22,6 @@ SPECIAL_SECTION_PATTERNS = {
     'art_cyfry': r'^Art\.\s*[0-9]{1,3}\.?',
     'paragraf_cyfry': r'^§\s*[0-9]{1,3}\.?',
     'ustep_cyfry': r'^Ust\.\s*[0-9]{1,3}\.?',
-    'owu_cyfry': r'^OWU\s*[0-9]{1,3}\.?'
 }
 
 # Dodatkowe flagi i opcje

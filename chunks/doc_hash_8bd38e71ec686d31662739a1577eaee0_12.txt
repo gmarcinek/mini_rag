@@ -1,4 +1,31 @@
-Artykuł 11. Duplikat Szczegółowej Umowy Ubezpieczenia
+Artykuł 13. Indeksacja
 
-1. W przypadku zagubienia bądź zniszczenia Szczegółowej Umowy Ubezpieczenia Towarzystwo, na wniosek Ubezpieczającego, wydaje duplikat dokumentu ubezpieczenia.
-2. Z dniem wydania duplikatu oryginał Szczegółowej Umowy Ubezpieczenia traci swoją ważność.
+1. Zasady indeksacji
+
+1. W rocznicę Umowy Towarzystwo dokonuje automatycznej indeksacji, o ile Ubezpieczający wyraził na to zgodę przed zawarciem Umowy we wniosku o zawarcie umowy ubezpieczenia.
+
+1. Wskaźnik indeksacji
+
+1. Indeksacja dokonywana jest w oparciu o wskaźnik indeksacji, który będzie zatwierdzany każdego roku przez Towarzystwo do dnia 30 września. Wskaźnik indeksacji będzie stosowany do Umów, których rocznica przypada w okresie pomiędzy dniem 1 grudnia danego roku a dniem 30 listopada następnego roku. Jeżeli wskaźnik inflacji jest mniejszy od 3%, wówczas wskaźnik indeksacji wynosi 3%. W przeciwnym wypadku wskaźnik indeksacji jest równy wskaźnikowi inflacji zaokrąglonemu do pełnego procenta w górę.
+
+Wskaźnik inflacji oznacza wskaźnik wzrostu cen towarów i usług konsumpcyjnych w okresie poprzedzających dwunastu miesięcy, tj. od 1 września poprzedniego roku do 31 sierpnia danego roku, ogłaszany przez Prezesa Głównego Urzędu Statystycznego. W razie zaniechania ogłaszania powyższego wskaźnika inflacji Towarzystwo stosować będzie inny procentowy wskaźnik określający wzrost cen towarów i usług konsumpcyjnych w tym samym okresie, ogłaszany przez właściwy organ lub instytucję państwową.
+
+3. Wprowadzenie indeksacji
+
+4. Jeżeli Ubezpieczający nie wyraził zgody na automatyczną indeksację składki przed zawarciem Umowy, może on złożyć do Towarzystwa wniosek o wprowadzenie indeksacji w trakcie trwania Umowy, każdorazowo nie później niż na 30 dni przed dniem rocznicy Umowy, od której zmiana ta miałaby obowiązywać. Po zaakceptowaniu tego wniosku Towarzystwo dokonuje automatycznej indeksacji w każdą rocznicę Umowy.
+
+5. Informacja o indeksacji
+
+6. Na 30 dni przed każdą rocznicą Umowy do Ubezpieczającego zostanie wysłany list informujący o nowych wartościach sumy ubezpieczenia, składki i wskaźnika indeksacji.
+
+7. Rezygnacja z indeksacji
+
+8. Ubezpieczający może zrezygnować z indeksacji, składając do Towarzystwa stosowny wniosek o anulowanie indeksacji, każdorazowo nie później niż 14 dni przed rocznicą Umowy, od której zmiana ta miałaby obowiązywać.
+
+9. Wyłączenie indeksacji
+
+10. Indeksacja nie będzie dokonywana w przypadku, gdy Towarzystwo przejęło obowiązek opłacania składek.
+
+11. Kalkulacja podwyższenia
+
+12. W odniesieniu do umowy podstawowej indeksacja powoduje podwyższenie składki z tytułu tej umowy o wskaźnik indeksacji, natomiast nowa podwyższona suma ubezpieczenia umowy podstawowej jest kalkulowana w oparciu o wzrost składki z tytułu tej umowy, poziom ryzyka ubezpieczeniowego, aktualny wiek Ubezpieczonego oraz okres, jaki pozostał do daty wygaśnięcia umowy podstawowej.

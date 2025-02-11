@@ -1,3 +1,35 @@
-Artykuł 1. Wstęp
+Artykuł 2. Definicje
 
-Niniejsze OWU mają zastosowanie do Umowy Indywidualne terminowe ubezpieczenie na życie zawartej pomiędzy Towarzystwem a Ubezpieczającym. Są one integralną częścią umowy ubezpieczenia i dokumentem wiążącym strony.
+Definicje określeń użytych w niniejszych OWU:
+
+1. biuro główne Towarzystwa – biuro NNLife TUnŻiR S.A. mieszczące się w Warszawie przy ul. Przemysłowej 26,
+2. data opłacenia składki – dzień wpływu całej składki na rachunek bankowy wskazany przez Towarzystwo,
+3. data wejścia w życie umowy podstawowej:
+   a) data rozpoczęcia ochrony ubezpieczeniowej wskazana przez Towarzystwo, to dzień następny po dacie opłacenia pierwszej składki, pod warunkiem wcześniejszego zawarcia Umowy – w przypadku, gdy Umowa jest zawierana w wyniku wstępnej oceny ryzyka lub
+   b) data rozpoczęcia ochrony ubezpieczeniowej wskazana w Szczegółowej Umowie Ubezpieczenia – w przypadku, gdy Umowa jest zawierana w wyniku pełnej analizy ryzyka,
+4. daty wejścia w życie umowy dodatkowej:
+   a) w przypadku, gdy umowa dodatkowa zawierana jest wraz z zawarciem umowy podstawowej – jest to data wejścia w życie tożsama z datą wejścia w życie umowy podstawowej,
+   b) w przypadku, gdy umowa dodatkowa zawierana jest w terminie wymagalności składki - jest to data wejścia w życie umowy dodatkowej wskazana w Szczegółowej Umowie Ubezpieczenia, pod warunkiem opłacenia składki,
+5. data wygaśnięcia – data wygaśnięcia umowy podstawowej lub umowy dodatkowej wskazana w Szczegółowej Umowie Ubezpieczenia,
+6. data zawarcia Umowy – data doręczenia Ubezpieczającemu Szczegółowej Umowy Ubezpieczenia, z zastrzeżeniem postanowień określonych w artykule 7,
+7. indeksacja – podwyższenie składki i sumy ubezpieczenia dokonywane przez Towarzystwo w rocznicę Umowy, na zasadach określonych w artykule 13,
+8. ochrona tymczasowa – ochrona ubezpieczeniowa udzielana zgodnie z postanowieniami artykułu 6 osobie wskazanej we wniosku o zawarcie umowy ubezpieczenia jako Ubezpieczony,
+9. okres prolongaty – okres 60 dni, rozpoczynający się dnia następującego po terminie wymagalności składki, jeśli nie została ona zapłacona w terminie i należnej wysokości. W okresie prolongaty Ubezpieczony lub Współubezpieczony są objęci ochroną ubezpieczeniową z tytułu Umowy. Okres prolongaty nie ma zastosowania do pierwszej składki,
+10. OWU – Ogólne Warunki Ubezpieczenia,
+11. reklamacja – każde wystąpienie Ubezpieczającego, Ubezpieczonego, Współubezpieczonego, Uposażonego lub uprawnionego z Umowy kierowane do Towarzystwa, w którym zgłasza zastrzeżenia dotyczące usług świadczonych przez Towarzystwo lub jego działalności,
+12. rocznica Umowy – dzień każdego kolejnego roku obowiązywania Umowy, który datą odpowiada dacie wejścia w życie umowy podstawowej,
+13. składka – kwota, jaką Ubezpieczający jest zobowiązany regularnie opłacać z tytułu Umowy, zgodnie z trybem jej opłacania. Jest ona określona w Szczegółowej Umowie Ubezpieczenia lub w stosownym załączniku. Obejmuje składkę za umowę podstawową oraz składki z tytułu umów dodatkowych, jeśli są zawarte,
+14. suma ubezpieczenia – kwota wskazana w Szczegółowej Umowie Ubezpieczenia, która określa zobowiązanie Towarzystwa w przypadku zajścia zdarzenia ubezpieczeniowego,
+15. Szczegółowa Umowa Ubezpieczenia (polisa) – dokument ubezpieczenia wystawiony przez Towarzystwo, potwierdzający zawarcie Umowy oraz objęcie ochroną ubezpieczeniową Ubezpieczonego lub Współubezpieczonego, zgodnie z wybranym przez Ubezpieczającego zakresem ochrony,
+16. techniczna stopa procentowa – roczna stopa zwrotu z inwestycji założona do kalkulacji składki z tytułu umowy podstawowej,
+17. termin wymagalności składki – dzień każdego kolejnego okresu obowiązywania Umowy, zgodnego z trybem opłacania składek, który dniem odpowiada dacie wejścia w życie umowy podstawowej,
+18. Towarzystwo – NNLife Towarzystwo Ubezpieczeń na Życie i Reasekuracji Spółka Akcyjna (NNLife TUnŻiR S.A.) z siedzibą w Warszawie (00-450), przy ul. Przemysłowej 26,
+19. Ubezpieczający – osoba fizyczna, osoba prawna lub jednostka organizacyjna nieposiadająca osobowości prawnej, która zawarła z Towarzystwem Umowę,
+20. Ubezpieczony – osoba fizyczna wskazana w Szczegółowej Umowie Ubezpieczenia, której życie lub zdrowie jest przedmiotem Umowy,
+21. Umowa – umowa ubezpieczenia, na którą składają się postanowienia tych OWU, Szczegółowa Umowa Ubezpieczenia, umowy dodatkowe, załączone do umowy ubezpieczenia wszelkie zgodne oświadczenia woli Ubezpieczającego, Ubezpieczonego i Współubezpieczonego oraz Towarzystwa, które stanowią jej integralną część,
+22. umowa dodatkowa – część Umowy, która zapewnia dodatkową ochronę ubezpieczeniową,
+23. umowa podstawowa – Indywidualne terminowe ubezpieczenie na życie,
+24. Uposażony – osoba wyznaczona na piśmie jako uprawniona do świadczeń na wypadek śmierci Ubezpieczonego lub Współubezpieczonego przewidzianych Umową,
+25. wskaźnik indeksacji – wskaźnik stosowany przy indeksacji Umowy do podwyższenia składki z tytułu umowy podstawowej i składek z tytułu indeksowanych umów dodatkowych, określony w artykule 13,
+26. Współubezpieczony – wskazana w Szczegółowej Umowie Ubezpieczenia osoba fizyczna, której życie lub zdrowie jest przedmiotem ubezpieczenia w ramach umowy dodatkowej,
+27. zdarzenie ubezpieczeniowe – zdarzenie objęte ochroną ubezpieczeniową w ramach tej umowy podstawowej – śmierć Ubezpieczonego w okresie obowiązywania Umowy.

@@ -30,6 +30,7 @@ class OllamaChunkTransformer(ChunkTransformer):
         fixed_text = self.generator.generate(prompt, [])
         return fixed_text
 
+
 class LegalTextSplitter:
     def __init__(self, transformer: Optional[ChunkTransformer] = None):
         self.transformer = transformer or ChunkTransformer()

@@ -1,9 +1,9 @@
-Zmiana Uposażonego następuje pod warunkiem otrzymania przez Towarzystwo skutecznego oświadczenia, o którym mowa w punkcie 1 powyżej, w sposób umożliwiający zapoznanie się z jego treścią.
+Artykuł 17. Zatajenie informacji
 
-3. Bezskuteczność wskazania Uposażonego
+1. Niezgodność lub zatajenie informacji
 
-Jeżeli Uposażony zmarł przed śmiercią odpowiednio Ubezpieczonego lub Współubezpieczonego albo umyślnie przyczynił się do jego śmierci, wskazanie Uposażonego staje się bezskuteczne.
+Jeżeli Ubezpieczający, Ubezpieczony lub Współubezpieczony podali dane niezgodne z prawdą lub zataili prawdę o okolicznościach, o które pytało Towarzystwo przy zawieraniu Umowy i okoliczności te pozostają w związku przyczynowym ze zgłoszonym zdarzeniem ubezpieczeniowym, Towarzystwo będzie wolne od odpowiedzialności, z zastrzeżeniem bezwzględnie obowiązujących przepisów prawa.
 
-4. Brak Uposażonego
+2. Ograniczenie czasowe
 
-Jeżeli w chwili śmierci odpowiednio Ubezpieczonego lub Współubezpieczonego nie ma osoby Uposażonego, świadczenie na wypadek śmierci należne z tytułu Umowy przypada spadkobiercom ustawowym odpowiednio Ubezpieczonego lub Współubezpieczonego w częściach, w jakich po nich dziedziczą.
+Jeżeli do zdarzenia ubezpieczeniowego doszło po upływie 3 lat od daty zawarcia Umowy, Towarzystwo nie będzie mogło podnieść zarzutu oświadczenia niezgodnego z prawdą albo zatajającego prawdę.

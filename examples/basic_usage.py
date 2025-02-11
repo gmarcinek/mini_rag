@@ -25,7 +25,7 @@ def main():
 
    # Przekazujemy transformer do LegalTextSplitter
    chunker = LegalTextSplitter(
-    #    transformer=transformer 
+    #    transformer=transformer // LLM support 
    )
 
    rag = MiniRAG(

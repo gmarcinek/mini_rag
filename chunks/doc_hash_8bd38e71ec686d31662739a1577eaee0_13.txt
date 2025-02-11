@@ -1,48 +1,48 @@
-Artykuł 12. Opłacanie składek
+Artykuł 14. Zgłoszenie roszczenia i wypłata świadczenia z tytułu śmierci Ubezpieczonego
 
-1. Ustalanie składki
+1. Dokumenty
 
-1. Składkę ustala Towarzystwo z uwzględnieniem:
-   a) zakresu oraz wysokości udzielanej ochrony ubezpieczeniowej,
-   b) wyłączeń i ograniczeń odpowiedzialności Towarzystwa i okresów odroczenia odpowiedzialności,
-   c) okresu ubezpieczenia,
-   d) technicznej stopy procentowej,
-   e) wyniku indywidualnej oceny poziomu ryzyka ubezpieczeniowego osoby, która ma być objęta ochroną ubezpieczeniową, w tym wieku oraz wykonywanej pracy,
-   f) opłat i kosztów zawarcia i obsługi Umowy.
+1. Informacje o wymaganych dokumentach i możliwościach ich poświadczania znajdują się na stronie internetowej Towarzystwa.
+1. W terminie 7 dni od daty otrzymania informacji o zdarzeniu ubezpieczeniowym Towarzystwo poinformuje osobę zgłaszającą roszczenie o wymaganych dokumentach określonych w punkcie 3 poniżej.
 
-1. Tryb opłacania składek
+1. Wymagane dokumenty
 
-1. Składka może być opłacana w trybie rocznym lub miesięcznym po wcześniejszym uzgodnieniu przez strony Umowy. Na wniosek Ubezpieczającego oraz za zgodą Towarzystwa w trakcie obowiązywania Umowy może nastąpić zmiana trybu opłacania składek.
+1. Do ustalenia prawa osoby zgłaszającej roszczenie do świadczenia niezbędne jest przekazanie Towarzystwu dokumentów:
+   a) w przypadku naturalnej śmierci Ubezpieczonego osoba uprawniona do świadczenia składa:
 
-1. Minimalna składka
+- odpis skrócony aktu zgonu w oryginale lub kopię poświadczoną za zgodność z oryginałem przez notariusza lub osoby upoważnione w jednym z biur sprzedaży Towarzystwa, lub organ wydający dokument,
+- wypełniony wniosek o wypłatę świadczenia – na formularzu Towarzystwa lub w formie pisemnego wniosku, który będzie zawierał dane wskazane na formularzu Towarzystwa,
+- kopię karty statystycznej do karty zgonu lub kopię dokumentacji medycznej potwierdzającą przyczynę zgonu Ubezpieczonego,
+- kopię dokumentu tożsamości każdego z Uposażonych / spadkobierców lub potwierdzenie tożsamości przez agenta wyłącznego (czyli osoby fizycznej wykonującej czynności agencyjne bezpośrednio w imieniu i na rzecz Towarzystwa), notariusza, organ wydający dokument, zgodnie z ustawą o przeciwdziałaniu praniu pieniędzy oraz finansowaniu terroryzmu. W przypadku osób, które przebywają poza granicami kraju, tożsamość może potwierdzić ambasador lub konsul RP,
+- w przypadku zgonu Uposażonego – odpis skrócony aktu zgonu Uposażonego w oryginale lub kopię poświadczoną za zgodność z oryginałem przez notariusza lub w jednym z biur sprzedaży Towarzystwa, lub organ wydający dokument,
 
-1. Minimalna składka z tytułu Umowy to 50 zł przy miesięcznym trybie opłacania lub 570 zł w przypadku rocznego trybu opłacania. Wyjątkiem jest sytuacja, gdy wysokość składki zmienia się w przypadku wygaśnięcia którejkolwiek umowy dodatkowej z powodu:
-   a) powstania obowiązku wypłaty świadczenia z tytułu umowy dodatkowej lub
-   b) wygaśnięcia umowy dodatkowej z powodu wieku Ubezpieczonego lub Współubezpieczonego wskazanego w OWU umowy dodatkowej, lub
-   c) śmierci Współubezpieczonego, lub
-   d) niezaakceptowania przez Ubezpieczającego zmienionych warunków umowy dodatkowej po upływie 5-letniego okresu wskazanego w OWU umowy dodatkowej, lub
-   e) automatycznego obniżania składki w umowie dodatkowej Dodatkowe ubezpieczenie na życie z malejącą sumą ubezpieczenia i składką.
+b) w przypadku śmierci Ubezpieczonego wskutek NW osoba uprawniona do świadczenia dodatkowo składa:
 
-1. Obowiązek opłacania składki
+- kopię dokumentacji dotyczącej okoliczności i przebiegu zdarzenia, sporządzonej przez organy policji, prokuratury, kopię wyroku sądu, a w razie ich braku wskazanie adresów i numerów spraw jednostek policji, prokuratury lub sądu, które prowadziły lub prowadzą postępowanie w sprawie,
+- kopię protokołu powypadkowego sporządzonego przez pracodawcę – w przypadku wypadku w pracy,
+- kopię innych dokumentów potwierdzających okoliczności wypadku.
 
-1. Ubezpieczający zobowiązany jest do zapłaty Towarzystwu składki z góry w wysokości i trybie określonych w Szczegółowej Umowie Ubezpieczenia.
+3. Potwierdzenie uprawnień i dokumenty dodatkowe
 
-1. Okres prolongaty
+4. Na podstawie otrzymanych dokumentów Towarzystwo potwierdzi uprawnienia osoby zgłaszającej roszczenie do świadczenia z tytułu Umowy.
+5. Jeśli potrzebne będą dodatkowe dokumenty, Towarzystwo poinformuje o tym niezwłocznie osobę zgłaszającą roszczenie.
+6. Towarzystwo ma prawo też żądać oryginalnych dokumentów lub kopii poświadczonych za zgodność z oryginałem. Za zgodność z oryginałem dokumenty mogą poświadczyć: notariusz lub osoby upoważnione w biurach sprzedaży Towarzystwa, lub organ, który wydał dokument.
 
-1. Począwszy od drugiej należnej składki, Ubezpieczającemu, który nie opłaci składki w terminie wymagalności, przysługuje dodatkowy 60-dniowy okres prolongaty, liczony od terminu wymagalności składki.
+7. Dokumenty zagraniczne
 
-1. Obowiązek informacyjny
+8. Dokumentacja dotycząca zdarzenia ubezpieczeniowego, które miało miejsce poza granicami Polski, musi być przetłumaczona na język polski przez tłumacza przysięgłego na koszt osoby, która zgłasza roszczenie.
 
-1. W przypadku gdy Ubezpieczający nie opłaci składki w terminie wymagalności, Towarzystwo wezwie Ubezpieczającego do opłacenia składki i poinformuje o skutkach jej nieopłacenia.
+9. Weryfikacja dokumentacji
 
-1. Wygaśnięcie Umowy
+10. Towarzystwo zastrzega sobie prawo do weryfikacji dostarczonej dokumentacji oraz zasięgania dodatkowych opinii specjalistów, jeśli jest ona niekompletna lub informacje w niej zawarte wymagają potwierdzenia.
+11. Towarzystwo może wystąpić z wnioskiem do policji, prokuratury, sądu, placówek medycznych i innych instytucji publicznych o dodatkowe informacje dotyczące okoliczności zdarzenia ubezpieczeniowego, o czym poinformuje osobę uprawnioną do świadczenia.
 
-1. W przypadku nieopłacenia składki Umowa i ochrona ubezpieczeniowa wygasną z upływem okresu prolongaty, lecz nie wcześniej niż dnia następnego po upływie 7 dni od daty otrzymania wezwania, o którym mowa w punkcie 6 powyżej.
+12. Terminy wypłaty świadczenia
 
-1. Odpowiedzialność za okres prolongaty
+13. Towarzystwo zobowiązuje się wypłacić świadczenie w terminie 30 dni, licząc od daty otrzymania powiadomienia o zdarzeniu ubezpieczeniowym.
+14. Gdyby wyjaśnienie w powyższym terminie okoliczności koniecznych do ustalenia odpowiedzialności Towarzystwa albo wysokości świadczenia okazało się niemożliwe, świadczenie powinno być wypłacone w ciągu 14 dni, licząc od dnia, w którym przy zachowaniu należytej staranności wyjaśnienie tych okoliczności było możliwe. Jednakże bezsporną część świadczenia Towarzystwo powinno wypłacić w 30-dniowym terminie wskazanym w punkcie 10 powyżej.
 
-1. Za okres prolongaty Ubezpieczający zobowiązany jest do opłacenia składki.
+15. Odmowa wypłaty świadczenia
 
-1. Obowiązek opłacania składek
-
-1. Towarzystwo nie ma obowiązku wysyłania Ubezpieczającemu druków / formularzy do opłacania składek. Składka powinna być opłacona przez Ubezpieczającego niezależnie od otrzymania druków / formularzy.
+16. Jeżeli osoba zgłaszająca roszczenie nie przedstawiła wymaganych dokumentów, które są niezbędne do ustalenia zasadności i wysokości świadczenia, Towarzystwo może odmówić wypłaty świadczenia.
+17. Jeżeli świadczenie nie przysługuje, Towarzystwo powiadomi o tym pisemnie osoby uprawnione do świadczenia, uzasadniając odmowę, w terminach określonych w punktach 10 i 11 powyżej.
