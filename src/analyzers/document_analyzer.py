@@ -11,14 +11,6 @@ from .metrics import (
 
 class DocumentAnalyzer:
     """Analizator jakości dokumentów wejściowych"""
-    
-    # Wzorce do identyfikacji sekcji
-    # SECTION_PATTERNS = {
-    #     'chapter': r'^(?:Rozdział|Rozdz\.|R\.)\s*(\d+|[IVXLCDM]+)',
-    #     'article': r'^(?:Art\.|Artykuł)\s*(\d+)',
-    #     'paragraph': r'^(?:§|Par\.)\s*(\d+)',
-    #     'point': r'^(?:\d+\)|[a-z]\))',
-    # }
     SECTION_PATTERNS = {
         'rozdzial': r'^(?:Rozdział|Rozdz\.|R\.)\s*(\d+|[IVXLCDM]+)',
         'art': r'^(?:Art\.|Artykuł)\s*(\d+)',
@@ -69,27 +61,122 @@ class DocumentAnalyzer:
         )
 
     def analyze_structure(self) -> StructureMetrics:
-        """Analizuje strukturę dokumentu"""
+        """Analizuje strukturę dokumentu z obsługą wielu typów sekcji"""
         sections = defaultdict(list)
         hierarchy = defaultdict(list)
-        current_section = None
         
-        for line in self.lines:
+        # Słownik do śledzenia bieżących kontenerów na różnych poziomach
+        current_containers = {}
+        
+        # Hierarchia typów sekcji (od najwyższego do najniższego poziomu)
+        hierarchy_order = [
+            'rozdzial',
+            'sekcja',
+            'postanowienia',
+            'definicje',
+            'owu',
+            'zalacznik',
+            'art',
+            'paragraf',
+            'ustep',
+            'punkt'
+        ]
+        
+        # Liczniki wystąpień nazw sekcji (do rozróżniania powtórzeń)
+        section_counters = defaultdict(int)
+        
+        # Słownik mapujący nazwę sekcji na jej unikalny identyfikator
+        section_ids = {}
+        
+        for line_idx, line in enumerate(self.lines):
+            matched = False
+            
+            # Próba dopasowania znanych typów sekcji z SECTION_PATTERNS
             for section_type, pattern in self.SECTION_PATTERNS.items():
                 if match := re.match(pattern, line):
-                    sections[section_type].append(match.group(1))
-                    if current_section:
-                        hierarchy[current_section].append(f"{section_type}_{match.group(1)}")
-                    current_section = f"{section_type}_{match.group(1)}"
+                    matched = True
+                    section_name = match.group(1)
+                    base_section_id = f"{section_type}_{section_name}"
+                    
+                    # Inkrementuj licznik dla tej nazwy sekcji
+                    section_counters[base_section_id] += 1
+                    counter = section_counters[base_section_id]
+                    
+                    # Utwórz unikalny identyfikator dla tej sekcji
+                    unique_section_id = f"{base_section_id}" if counter == 1 else f"{base_section_id} ({counter})"
+                    
+                    # Zapisz informację o tej sekcji
+                    sections[section_type].append(section_name)
+                    section_ids[(section_type, section_name, line_idx)] = unique_section_id
+                    
+                    # Wyczyść wszystkie kontenery na niższych poziomach
+                    section_index = hierarchy_order.index(section_type)
+                    for lower_type in hierarchy_order[section_index+1:]:
+                        current_containers.pop(lower_type, None)
+                    
+                    # Ustaw tę sekcję jako kontener dla jej poziomu
+                    current_containers[section_type] = unique_section_id
+                    
+                    # Logika hierarchii - dodaj tę sekcję jako dziecko najniższego kontenera wyższego poziomu
+                    parent_found = False
+                    for higher_type in reversed(hierarchy_order[:section_index]):
+                        if higher_type in current_containers:
+                            parent_id = current_containers[higher_type]
+                            hierarchy[parent_id].append(unique_section_id)
+                            parent_found = True
+                            break
+                    
+                    # Jeśli nie znaleziono rodzica, dodaj do głównego dokumentu
+                    if not parent_found:
+                        hierarchy['dokument'].append(unique_section_id)
+                    
                     break
+            
+            # Jeśli nie znaleziono standardowej sekcji, sprawdź czy to punkt artykułu
+            if not matched:
+                # Wzorce dla punktów i podpunktów
+                punkt_patterns = [
+                    r'^(\d+)\)\s',             # np. "1) Treść punktu"
+                    r'^(\d+\.\d+)\)\s',        # np. "1.1) Treść podpunktu"
+                    r'^([a-z])\)\s',           # np. "a) Treść punktu"
+                    r'^(-|\*)\s',              # np. "- Treść punktu" lub "* Treść punktu"
+                    r'^\s*(\d+\°)\s'           # np. "1° Treść punktu"
+                ]
+                
+                for punkt_pattern in punkt_patterns:
+                    if punkt_match := re.match(punkt_pattern, line):
+                        punkt_id = f"punkt_{punkt_match.group(1)}"
+                        
+                        # Zapisz punkt jako element sekcji
+                        sections['punkt'].append(punkt_match.group(1))
+                        
+                        # Znajdź najbliższy kontener dla punktu
+                        parent_found = False
+                        for container_type in ['art', 'paragraf', 'ustep']:
+                            if container_type in current_containers:
+                                parent_id = current_containers[container_type]
+                                hierarchy[parent_id].append(punkt_id)
+                                parent_found = True
+                                break
+                        
+                        # Jeśli nie znaleziono kontenera, spróbuj dodać do najniższego kontenera
+                        if not parent_found:
+                            for container_type in reversed(hierarchy_order):
+                                if container_type in current_containers:
+                                    parent_id = current_containers[container_type]
+                                    hierarchy[parent_id].append(punkt_id)
+                                    break
+                        
+                        # Ustaw punkt jako aktualny kontener dla "punkt"
+                        current_containers['punkt'] = punkt_id
+                        break
         
         return StructureMetrics(
             total_sections=sum(len(s) for s in sections.values()),
             section_types={k: len(v) for k, v in sections.items()},
             max_depth=max(len(path) for path in hierarchy.values()) if hierarchy else 0,
             section_hierarchy=dict(hierarchy),
-            missing_required_sections=self._check_missing_sections(sections),
-            incomplete_sections=self._find_incomplete_sections(sections)
+            incomplete_sections=self._find_incomplete_sections(sections),
         )
 
     def analyze_references(self) -> ReferenceMetrics:
@@ -129,32 +216,6 @@ class DocumentAnalyzer:
             noise_level=noise_level
         )
 
-    def _check_missing_sections(self, sections: Dict[str, List[str]]) -> List[str]:
-        """Sprawdza brakujące wymagane sekcje dokumentu."""
-        required_sections = {
-            'rozdzial': {'1', '2', '3'},  # Wymagane rozdziały
-            'art': {'1', '2', '5'},  # Wymagane artykuły
-            'paragraf': {'1', '2', '3', '4'},  # Wymagane paragrafy
-            'ustep': {'1', '2'},  # Wymagane ustępy
-            'zalacznik': {'1'},  # Wymagany co najmniej jeden załącznik
-            'sekcja': {'1'},  # Wymagana sekcja 1
-            'owu': {'1'},  # OWU musi mieć co najmniej jedną część
-            'definicje': {'1'},  # Definicje muszą się pojawić
-            'postanowienia': {'1'},  # Wymagane postanowienia ogólne lub końcowe
-        }
-
-        missing = []
-        for section_type, required in required_sections.items():
-            if section_type not in sections:
-                missing.append(f"Brak sekcji typu: {section_type}")
-                continue
-
-            existing = set(sections[section_type])
-            missing_numbers = required - existing
-            if missing_numbers:
-                missing.extend(f"Brak {section_type} {num}" for num in sorted(missing_numbers))
-
-        return missing
 
     def _find_incomplete_sections(self, sections: Dict[str, List[str]]) -> List[str]:
         """Znajduje niekompletne sekcje (bez treści lub z niepełną treścią)."""
@@ -217,7 +278,6 @@ class DocumentAnalyzer:
         }
         
         # Punkty za brakujące sekcje
-        missing_score = 1.0 - (len(structure.missing_required_sections) * 0.1)
         missing_score = max(0.0, missing_score)
         
         # Punkty za niekompletne sekcje

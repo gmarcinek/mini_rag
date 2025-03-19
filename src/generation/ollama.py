@@ -13,7 +13,7 @@ class OllamaGenerator:
         self.timeout = timeout
         self.max_context_length = max_context_length
 
-    def generate(self, query: str, contexts: List[Chunk], max_tokens: int = 4000) -> str:
+    def generate(self, query: str, contexts: List[Chunk], max_tokens: int = 12000) -> str:
         """Generuje odpowiedź z poprawioną obsługą długich odpowiedzi."""
         system_prompt = self._format_system_prompt(contexts)
         config = self._get_generation_config(max_tokens)
@@ -54,7 +54,7 @@ class OllamaGenerator:
     
     def _get_generation_config(self, max_tokens: int) -> dict:
         return {
-            "temperature": 0,
+            "temperature": 0.3,
             "num_predict": max_tokens,
         }
 
@@ -65,7 +65,7 @@ class OllamaGenerator:
         contexts = [ctx for ctx in contexts if ctx and ctx.text and ctx.text.strip()]
         
         if not contexts:
-            return """Jesteś asystentem AI działy prawnego w firmie Nationale Nederlanden. 
+            return """Jesteś asystentem AI działu prawnego w firmie Nationale Nederlanden. 
             Niestety nie ma w dokumencie OWU informacji na ten temat, więc nie możesz udzielić szczegółowej odpowiedzi."""
         
         contexts = self._truncate_contexts(contexts)
@@ -75,7 +75,7 @@ class OllamaGenerator:
             for i, ctx in enumerate(contexts)
         ])
         
-        return f"""Jesteś asystentem AI działy prawnego w firmie Nationale Nederlanden, który ma prawo udzielać wszelkich informacji z zakresu OWU.
+        return f"""Jesteś asystentem AI działu prawnego w firmie Nationale Nederlanden, który ma prawo udzielać wszelkich informacji z zakresu OWU.
         Odpowiadasz na pytania pracowników działu prawnego wyłącznie w oparciu o dostarczone fragmenty OWU. Nie masz uprawnień udzielać informacji niezwiązanych z OWU lub tematyką związaną z polsą ubezpieczeniową.
 
         TWOJE ZASADY ODPOWIADANIA:

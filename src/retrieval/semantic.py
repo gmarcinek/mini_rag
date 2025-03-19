@@ -16,13 +16,13 @@ class SemanticRetriever:
 
         self.broad_query_keywords = {
             'rozdział', 'rozdziały', 'dział', 'działy', 'sekcja', 'sekcje',
-            'artykuł', 'artykuły', 'paragraf', 'paragrafy', 'ustęp', 'ustępy',
+            'art', 'artykuł', 'artykuły', 'paragraf', 'paragrafy', 'ustęp', 'ustępy',
             'punkt', 'punkty', 'załącznik', 'załączniki',
             'rozdz', 'art', 'par', 'ust', 'pkt', 'zał',
             'owu', 'ogólne warunki', 'ogólne warunki umowy', 'ogólne warunki ubezpieczenia',
             'wyłączenia', 'warunki', 'wszystkie', 'lista', 'wymień',
             'obowiązki', 'prawa', 'odpowiedzialność', 'zakres', 'termin',
-            'postanowienia', 'postanowienia ogólne', 'postanowienia szczegółowe', 'postanowienia końcowe'
+            'postanowienia', 'postanowienia ogólne', 'postanowienia szczegółowe', 'postanowienia końcowe',
         }
 
         self.specific_query_keywords = {
@@ -98,7 +98,7 @@ class SemanticRetriever:
         
         complexity = self._calculate_query_complexity(query)[0]
         adjustment = 0.1 * (1 - complexity)
-        return min(max(base_score + adjustment, 0.5), 0.9)
+        return min(max(base_score + adjustment, 0.5), 0.8)
 
     def _get_optimal_top_k(self, similarities: List[Tuple[int, float]], min_results: int = 3) -> int:
         if not similarities:

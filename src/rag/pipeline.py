@@ -20,8 +20,8 @@ class MiniRAG:
             cache_dir: str = "cache", 
             chunker: SimpleTextSplitter = None, 
             generator_model: str = "llama3.2",
-            min_score_threshold: float = 0.80,
-            max_top_k: int = 6,
+            min_score_threshold: float = 0.8,
+            max_top_k: int = 10,
             max_context_length: int = 32000):
 
         self.embedder = BertEmbedder(use_gpu=use_gpu)
@@ -75,12 +75,14 @@ class MiniRAG:
         )
 
     def query(self, question: str, top_k: Optional[int] = None, 
-            min_score: Optional[float] = None) -> Dict[str, Any]:
+        min_score: Optional[float] = None) -> Dict[str, Any]:
         retrieved_chunks = self.retrieve(question, top_k, min_score)
         
         print(f"\nWybrane chunki dla zapytania: '{question}'")
         for chunk, score in retrieved_chunks:
             print(f"- Score: {score:.3f}, Chunk ID: {chunk.chunk_id}")
+            print(f"  Treść: {chunk.text}")
+            print("---")  # Separator między chunkami
         
         contexts = [chunk for chunk, score in retrieved_chunks]
         answer = self.generator.generate(question, contexts)

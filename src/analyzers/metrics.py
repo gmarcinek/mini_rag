@@ -20,7 +20,6 @@ class StructureMetrics:
     section_types: Dict[str, int]  # typ sekcji -> liczba wystąpień
     max_depth: int
     section_hierarchy: Dict[str, List[str]]  # sekcja -> lista podsekcji
-    missing_required_sections: List[str]
     incomplete_sections: List[str]
 
 @dataclass
@@ -67,6 +66,5 @@ class DocumentMetrics:
             'noise_level': self.noise_level,
             'has_critical_issues': self.has_critical_issues,
             'total_sections': self.structure.total_sections,
-            'missing_sections': len(self.structure.missing_required_sections),
             'broken_references': len(self.references.broken_references)
         }
