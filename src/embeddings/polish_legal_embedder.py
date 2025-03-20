@@ -3,11 +3,10 @@ from transformers import AutoTokenizer, AutoModel
 import numpy as np
 
 class PolishLegalEmbedder:
-    def __init__(self, use_gpu: bool = False):
+    def __init__(self, use_gpu: bool = False, model_name = "BAAI/bge-m3"):
         self.device = torch.device("cuda" if use_gpu and torch.cuda.is_available() else "cpu")
         print(f"Using device: {self.device}")
 
-        model_name = "BAAI/bge-m3"
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         self.model = AutoModel.from_pretrained(model_name).to(self.device)
         print(f"Załadowano model {model_name}")

@@ -7,8 +7,8 @@ from src.documents.similarity import DocumentSimilarity
 class SemanticRetriever:
     def __init__(self,
                 embedder: PolishLegalEmbedder,
-                min_score_threshold: float = 0.40,
-                max_top_k: int = 2):
+                min_score_threshold: float = 0.7,
+                max_top_k: int = 5):
         self.embedder = embedder
         self.min_score_threshold = min_score_threshold
         self.max_top_k = max_top_k
@@ -32,6 +32,39 @@ class SemanticRetriever:
             'wyjaśnienie', 'objaśnienie', 'określenie'
         }
 
+    def cosine_similarity(self, vec1: np.ndarray, vec2: np.ndarray) -> float:
+        """
+        Oblicza podobieństwo kosinusowe między dwoma wektorami w stabilny sposób.
+        
+        Args:
+            vec1: Pierwszy wektor.
+            vec2: Drugi wektor.
+            
+        Returns:
+            float: Wartość podobieństwa kosinusowego w zakresie [-1, 1].
+        """
+        # Upewniamy się, że wektory są 1D i mają ten sam kształt
+        vec1 = vec1.reshape(-1)
+        vec2 = vec2.reshape(-1)
+        
+        if vec1.shape != vec2.shape:
+            raise ValueError(f"Wektory muszą mieć ten sam kształt, otrzymano: {vec1.shape} i {vec2.shape}")
+        
+        # Obliczamy normy wektorów
+        norm1 = np.linalg.norm(vec1)
+        norm2 = np.linalg.norm(vec2)
+        
+        # Obsługa przypadku, gdy jeden z wektorów ma normę bliską zeru
+        if norm1 < 1e-10 or norm2 < 1e-10:
+            return 0.0
+        
+        # Normalizacja wektorów przed obliczeniem iloczynu skalarnego
+        vec1_normalized = vec1 / norm1
+        vec2_normalized = vec2 / norm2
+        
+        # Obliczenie podobieństwa kosinusowego
+        return np.dot(vec1_normalized, vec2_normalized)
+
     def retrieve(self, 
                 query: str, 
                 documents: List[Chunk],
@@ -44,7 +77,7 @@ class SemanticRetriever:
         
         if is_broad_query:
             base_min_score = 0.45
-            effective_top_k = 3
+            effective_top_k = top_k
             print("Wykryto zapytanie wymagające szerokiego kontekstu")
         else:
             base_min_score = min_score if min_score is not None else self.min_score_threshold
@@ -57,10 +90,15 @@ class SemanticRetriever:
         similarities = []
         
         for i, doc_embedding in enumerate(embeddings):
-            similarity = np.dot(query_embedding.flatten(), doc_embedding.flatten()) / \
-                        (np.linalg.norm(query_embedding) * np.linalg.norm(doc_embedding))
-            if similarity >= adjusted_min_score:
-                similarities.append((i, similarity))
+            try:
+                # Używamy ulepszonej funkcji podobieństwa kosinusowego
+                similarity = self.cosine_similarity(query_embedding, doc_embedding)
+                
+                if similarity >= adjusted_min_score:
+                    similarities.append((i, similarity))
+            except Exception as e:
+                print(f"Błąd podczas obliczania podobieństwa dla dokumentu {i}: {str(e)}")
+                continue
         
         sorted_similarities = sorted(similarities, key=lambda x: x[1], reverse=True)
         
@@ -94,7 +132,7 @@ class SemanticRetriever:
 
     def _adjust_min_score(self, query: str, base_score: float, is_broad_query: bool) -> float:
         if is_broad_query:
-            return max(base_score - 0.2, 0.4)
+            return max(base_score - 0.4, 0.7)
         
         complexity = self._calculate_query_complexity(query)[0]
         adjustment = 0.1 * (1 - complexity)

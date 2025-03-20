@@ -1,4 +1,5 @@
 from src.rag.pipeline import MiniRAG
+from src.rag.LegalRAGPipeline import LegalRAGPipeline
 from src.chunking.text_splitter import SimpleTextSplitter
 from src.chunking.legal_text_splitter import LegalTextSplitter, OllamaChunkTransformer
 from src.chunking.hierarchical_chunker import HierarchicalLegalChunker
@@ -29,9 +30,11 @@ def main():
     # chunker = LegalTextSplitter(
     chunker = HierarchicalLegalChunker()
 
-    rag = MiniRAG(
+    rag = LegalRAGPipeline(
         use_gpu=True,
-        chunker=chunker
+        chunker=chunker,
+        debug_mode=True,
+        max_top_k=5
     )
    
     rag.add_documents([document])
@@ -50,7 +53,7 @@ def main():
             continue
 
         try:
-            result = rag.query(query)
+            result = rag.smart_query(query)
             print("\n===================================")
             print("\nOdpowiedź:")
             print(result['answer'])
