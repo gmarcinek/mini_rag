@@ -1,7 +1,7 @@
 [project]
 name = "mini-rag"
 version = "0.1.0"
-description = ""
+description = "System RAG dla polskich dokumentów prawnych"
 authors = [
     {name = "gmarcinek",email = "grzegorz.marcinek@gmail.com"}
 ]
@@ -14,10 +14,20 @@ dependencies = [
     "requests>=2.31.0",
     "pathlib (>=1.0.1,<2.0.0)",
     "setuptools (>=75.8.0,<76.0.0)",
-    "matplotlib (>=3.10.0,<4.0.0)"
+    "matplotlib (>=3.10.0,<4.0.0)",
+    "sentence-transformers>=2.2.2",
+    "accelerate>=0.25.0",
+    "huggingface-hub (>=0.29.3,<0.30.0)",
+    "python-dotenv (>=1.0.1,<2.0.0)",
+    "sacremoses (>=0.1.1,<0.2.0)",
+    "protobuf (>=6.30.1,<7.0.0)"
 ]
+
 [tool.poetry.scripts]
 metrics = "scripts.test_document_quality:main"
+dev = "scripts.basic_usage:main"
+embed = "scripts.embed_documents:main"
+
 [tool.poetry]
 packages = [
     { include = "src" }

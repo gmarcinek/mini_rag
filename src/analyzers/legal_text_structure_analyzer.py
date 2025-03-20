@@ -11,15 +11,15 @@ class LegalTextStructureAnalyzer:
     
     # Wzorce rozpoznawania sekcji strukturalnych
     SECTION_PATTERNS = {
-        'rozdzial': r'^(?:Rozdział|Rozdz\.|R\.)\s*(\d+|[IVXLCDM]+)',
-        'art': r'^(?:Art\.|Artykuł)\s*(\d+)',
-        'paragraf': r'^(?:§|Par\.)\s*(\d+)',
-        'ustep': r'^(?:Ust\.|Ustęp|U\.)\s*(\d+)',
-        'zalacznik': r'^(?:Zał\.|Załącznik|Z\.)\s*(\d+)',
-        'sekcja': r'^(?:Sekcja|Sek\.)\s*(\d+)',
-        'owu': r'^(?:OWU|Ogólne\s*Warunki\s*Umowy)\s*(\d+)',
-        'definicje': r'^(?:Definicje|Def\.)\s*(\d+)',
-        'postanowienia': r'^(?:Postanowienia)\s*(?:Ogólne|Szczegółowe|Końcowe)\s*(\d+)',
+        'rozdzial': r'^(?:Rozdział|Rozdz\.|R\.)\s*(\d+|[IVXLCDM]+)\.?',  # Dodane \.? aby obsługiwać opcjonalną kropkę
+        'art': r'^(?:Art\.|Artykuł)\s*(\d+)\.?',  # Również dodane \.?
+        'paragraf': r'^(?:§|Par\.)\s*(\d+)\.?',
+        'ustep': r'^(?:Ust\.|Ustęp|U\.)\s*(\d+)\.?',
+        'zalacznik': r'^(?:Zał\.|Załącznik|Z\.)\s*(\d+)\.?',
+        'sekcja': r'^(?:Sekcja|Sek\.)\s*(\d+)\.?',
+        'owu': r'^(?:OWU|Ogólne\s*Warunki\s*Umowy)\s*(\d+)\.?',
+        'definicje': r'^(?:Definicje|Def\.)\s*(\d+)\.?',
+        'postanowienia': r'^(?:Postanowienia)\s*(?:Ogólne|Szczegółowe|Końcowe)\s*(\d+)\.?',
     }
     
     # Wzorce dla punktów i podpunktów
@@ -32,22 +32,21 @@ class LegalTextStructureAnalyzer:
     ]
 
     HIERARCHY = {
-        'rozdział': 1,
-        'sekcja': 1,
-        'zalacznik': 1,
-        'owu': 1,
-        'definicje': 2,
-        'postanowienia': 2,
-        'artykuł': 2,
-        'art': 2,
-        'paragraf': 2,
-        'punkt': 3,
-        'ustep': 3,
-        'stopniowy_punkt': 3,
-        'podpunkt': 4,
-        'wyliczenie': 4,
-        'literowy_punkt': 4,
-        'wyliczenie': 4,
+        'rozdział': 0,
+        'sekcja': 0,
+        'zalacznik': 0,
+        'owu': 0,
+        'definicje': 1,
+        'postanowienia': 1,
+        'artykuł': 1,
+        'art': 1,
+        'paragraf': 1,
+        'punkt': 2,
+        'ustep': 2,
+        'stopniowy_punkt': 2,
+        'podpunkt': 3,
+        'wyliczenie': 3,
+        'literowy_punkt': 3,
     }
     
     def __init__(self, text: str):
@@ -77,8 +76,13 @@ class LegalTextStructureAnalyzer:
                     section_name = match.group(1)
                     section_id = f"{section_type}_{section_name}"
                     
+                    # Upewniamy się, że używamy spójnego klucza do HIERARCHY
+                    # Jeśli section_type to 'rozdzial', konwertujemy na 'rozdział' dla zgodności z HIERARCHY
+                    hierarchy_key = 'rozdział' if section_type == 'rozdzial' else section_type
+                    
                     markers.append({
                         'type': section_type,
+                        'hierarchy_key': hierarchy_key,  # Dodajemy klucz do hierarchii
                         'name': section_name,
                         'id': section_id,
                         'line': line_idx,
@@ -98,6 +102,7 @@ class LegalTextStructureAnalyzer:
                     
                     markers.append({
                         'type': 'punkt',
+                        'hierarchy_key': 'punkt',  # Dodajemy klucz do hierarchii
                         'subtype': 'punkt_numeryczny',
                         'name': punkt_name,
                         'id': punkt_id,
@@ -115,6 +120,7 @@ class LegalTextStructureAnalyzer:
                             
                             markers.append({
                                 'type': 'punkt',
+                                'hierarchy_key': punkt_type,  # Dodajemy klucz do hierarchii
                                 'subtype': punkt_type,
                                 'name': punkt_name,
                                 'id': punkt_id,
@@ -127,19 +133,32 @@ class LegalTextStructureAnalyzer:
         # Sortujemy markery według pozycji w tekście
         markers = sorted(markers, key=lambda x: x['line'])
         
+        # Przypisujemy hierarchię do każdego markera
+        for marker in markers:
+            # Używamy hierarchy_key do uzyskania poziomu hierarchii
+            hierarchy_key = marker.get('hierarchy_key', marker['type'])
+            marker['hierarchy_level'] = self.HIERARCHY.get(hierarchy_key, 3)
+        
         # Dodajemy informacje o końcu zawartości każdej sekcji
         for i, marker in enumerate(markers):
-            current_level = self.HIERARCHY.get(marker['type'], 3)
+            current_type = marker['type']
+            current_level = marker['hierarchy_level']
             
-            # Znajdź koniec sekcji - następna sekcja o równym lub wyższym poziomie
+            # Znajdź koniec sekcji
             for j in range(i + 1, len(markers)):
                 next_marker = markers[j]
-                next_level = self.HIERARCHY.get(next_marker['type'], 3)
-
-                if next_level <= current_level:
-                    marker['content_end'] = next_marker['line']
+                next_type = next_marker['type']
+                next_level = next_marker['hierarchy_level']
+                
+                # Sekcja kończy się gdy:
+                # 1. Napotkamy sekcję tego samego typu (np. artykuł -> artykuł)
+                # 2. LUB napotkamy sekcję wyższego poziomu (np. artykuł -> rozdział)
+                # Mniejsza liczba w HIERARCHY oznacza wyższy poziom w hierarchii
+                if next_type == current_type or next_level <= current_level:
+                    marker['content_end'] = next_marker['line'] - 1
                     break
             else:
+                # Jeśli to ostatnia sekcja w dokumencie
                 marker['content_end'] = len(self.lines)
         
         return markers
@@ -213,15 +232,6 @@ class LegalTextStructureAnalyzer:
         return dict(hierarchy)
     
     def get_section_content(self, section_id: str) -> str:
-        """
-        Zwraca pełną zawartość tekstową sekcji.
-        
-        Args:
-            section_id: Identyfikator sekcji
-            
-        Returns:
-            Tekst sekcji
-        """
         for marker in self.section_markers:
             if marker['id'] == section_id:
                 start = marker['content_start']
@@ -231,12 +241,6 @@ class LegalTextStructureAnalyzer:
         return ""
     
     def create_child_to_parent_map(self) -> Dict[str, str]:
-        """
-        Tworzy mapę dziecko -> rodzic na podstawie hierarchii.
-        
-        Returns:
-            Słownik {child_id: parent_id}
-        """
         child_to_parent = {}
         
         for parent, children in self.hierarchy.items():
@@ -246,16 +250,6 @@ class LegalTextStructureAnalyzer:
         return child_to_parent
     
     def build_context_path(self, section_id: str) -> List[Dict[str, str]]:
-        """
-        Buduje pełną ścieżkę kontekstu dla sekcji.
-        
-        Args:
-            section_id: ID sekcji
-            
-        Returns:
-            Lista słowników z kontekstem od korzenia do sekcji:
-            [{'type': 'rozdzial', 'id': 'rozdzial_1', 'name': '1'}, ...]
-        """
         path = []
         current_id = section_id
         
@@ -291,15 +285,6 @@ class LegalTextStructureAnalyzer:
         return list(reversed(path))
     
     def get_section_bounds(self, section_id: str) -> Optional[Tuple[int, int]]:
-        """
-        Zwraca indeksy linii początku i końca sekcji.
-        
-        Args:
-            section_id: Identyfikator sekcji
-            
-        Returns:
-            Krotka (line_start, line_end) lub None jeśli nie znaleziono
-        """
         for marker in self.section_markers:
             if marker['id'] == section_id:
                 return marker['line'], marker['content_end']
@@ -307,15 +292,6 @@ class LegalTextStructureAnalyzer:
         return None
     
     def get_children_for_section(self, section_id: str) -> List[Dict]:
-        """
-        Zwraca listę markerów dzieci danej sekcji.
-        
-        Args:
-            section_id: Identyfikator sekcji rodzica
-            
-        Returns:
-            Lista słowników z informacjami o sekcjach dzieci
-        """
         if section_id not in self.hierarchy:
             return []
         
@@ -323,27 +299,9 @@ class LegalTextStructureAnalyzer:
         return [marker for marker in self.section_markers if marker['id'] in child_ids]
     
     def get_sections_by_type(self, section_type: str) -> List[Dict]:
-        """
-        Zwraca wszystkie sekcje danego typu.
-        
-        Args:
-            section_type: Typ sekcji (np. 'art', 'punkt', 'rozdzial')
-            
-        Returns:
-            Lista słowników z informacjami o sekcjach
-        """
         return [marker for marker in self.section_markers if marker['type'] == section_type]
     
     def format_context_path(self, path: List[Dict[str, str]]) -> str:
-        """
-        Formatuje ścieżkę kontekstu do czytelnej formy.
-        
-        Args:
-            path: Ścieżka kontekstu
-            
-        Returns:
-            Sformatowany string z kontekstem
-        """
         context_parts = []
         
         for ctx in path:

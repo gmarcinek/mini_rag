@@ -5,7 +5,7 @@ import json
 import numpy as np
 from typing import List, Tuple, Dict, Optional, Any
 from src.chunking import Chunk
-from src.embeddings import BertEmbedder
+from src.embeddings import PolishLegalEmbedder
 from src.chunking.hierarchical_chunker import LegalChunk
 
 class BaseCache(ABC):
@@ -16,7 +16,7 @@ class BaseCache(ABC):
         self.embeddings_dir.mkdir(exist_ok=True)
         self.chunks_info_path = self.cache_dir / "chunks_info.json"
     
-    def get_embedding(self, text: str, embedder: BertEmbedder) -> np.ndarray:
+    def get_embedding(self, text: str, embedder: PolishLegalEmbedder) -> np.ndarray:
         """Get embedding for text, using cache if available."""
         text_hash = hashlib.md5(text.encode()).hexdigest()
         embedding_path = self.embeddings_dir / f"{text_hash}.npy"

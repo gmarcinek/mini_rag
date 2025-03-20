@@ -25,7 +25,7 @@ class DocumentAnalyzer:
 
     # Wzorce referencji
     REFERENCE_PATTERNS = {
-        'internal': r'(?:zgodnie z|patrz|w art|w punk|wrozdziale|w rozdz|por\.|zob\.)?\s*(?:§|art\.|rozdz\.|pkt\.|ust\.)?\s*\d+',
+        'internal': r'(?:zgodnie z|patrz|w art|w punk|w rozdziale|w rozdz|por\.|zob\.)?\s*(?:§|art\.|rozdz\.|pkt\.|ust\.)?\s*\d+',
         'external': r'(?:Dz\.U\.|M\.P\.)\s*(?:z\s*\d{4}\s*r\.)?\s*(?:Nr\s*\d+)?',
     }
 

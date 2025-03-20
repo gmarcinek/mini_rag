@@ -1,14 +1,14 @@
 from typing import List, Tuple, Optional, Set
 import numpy as np
 from src.chunking import Chunk
-from src.embeddings import BertEmbedder
+from src.embeddings import PolishLegalEmbedder
 from src.documents.similarity import DocumentSimilarity
 
 class SemanticRetriever:
     def __init__(self,
-                embedder: BertEmbedder,
+                embedder: PolishLegalEmbedder,
                 min_score_threshold: float = 0.80,
-                max_top_k: int = 6):
+                max_top_k: int = 10):
         self.embedder = embedder
         self.min_score_threshold = min_score_threshold
         self.max_top_k = max_top_k
@@ -44,7 +44,7 @@ class SemanticRetriever:
         
         if is_broad_query:
             base_min_score = 0.45
-            effective_top_k = 35
+            effective_top_k = 10
             print("Wykryto zapytanie wymagające szerokiego kontekstu")
         else:
             base_min_score = min_score if min_score is not None else self.min_score_threshold

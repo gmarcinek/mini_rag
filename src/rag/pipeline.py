@@ -11,7 +11,7 @@ import numpy as np
 from src.chunking import Chunk, SimpleTextSplitter
 from src.generation.ollama import OllamaGenerator
 from src.cache import BaseCache
-from src.embeddings import BertEmbedder
+from src.embeddings import PolishLegalEmbedder
 from src.retrieval.semantic import SemanticRetriever
 
 class MiniRAG:
@@ -24,7 +24,7 @@ class MiniRAG:
             max_top_k: int = 10,
             max_context_length: int = 32000):
 
-        self.embedder = BertEmbedder(use_gpu=use_gpu)
+        self.embedder = PolishLegalEmbedder(use_gpu=use_gpu)
         self.cache = BaseCache(cache_dir)
         self.retriever = SemanticRetriever(
             embedder=self.embedder,

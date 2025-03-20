@@ -13,7 +13,7 @@ class OllamaGenerator:
         self.timeout = timeout
         self.max_context_length = max_context_length
 
-    def generate(self, query: str, contexts: List[Chunk], max_tokens: int = 12000) -> str:
+    def generate(self, query: str, contexts: List[Chunk], max_tokens: int = 4000) -> str:
         """Generuje odpowiedź z poprawioną obsługą długich odpowiedzi."""
         system_prompt = self._format_system_prompt(contexts)
         config = self._get_generation_config(max_tokens)
@@ -66,7 +66,8 @@ class OllamaGenerator:
         
         if not contexts:
             return """Jesteś asystentem AI działu prawnego w firmie Nationale Nederlanden. 
-            Niestety nie ma w dokumencie OWU informacji na ten temat, więc nie możesz udzielić szczegółowej odpowiedzi."""
+            Niestety nie masz uprawnień udzielać informacji na jakiekolwiek pytanie.
+            Odpowiedz grzecznie że nie masz danych."""
         
         contexts = self._truncate_contexts(contexts)
             
@@ -75,24 +76,18 @@ class OllamaGenerator:
             for i, ctx in enumerate(contexts)
         ])
         
-        return f"""Jesteś asystentem AI działu prawnego w firmie Nationale Nederlanden, który ma prawo udzielać wszelkich informacji z zakresu OWU.
-        Odpowiadasz na pytania pracowników działu prawnego wyłącznie w oparciu o dostarczone fragmenty OWU. Nie masz uprawnień udzielać informacji niezwiązanych z OWU lub tematyką związaną z polsą ubezpieczeniową.
-
+        return f"""Jesteś asystentem AI w firmie Nationale Nederlanden, który ma prawo udzielać wszelkich informacji zawartych we FRAGMENTACH OWU DO ANALIZY.
+     
         TWOJE ZASADY ODPOWIADANIA:
         1. Zawsze udzielaj pełnej, kompletnej odpowiedzi spójnej logicznie.
-        2. Jeśli znajdziesz odpowiednią informację w kontekście, zacytuj konkretny paragraf i punkt.
+        2. Cytuj konkretny rozdział, paragraf, artykuł, punkt.
         3. Nie używaj zwrotów typu "Według kontekstu" czy "Z dostępnych informacji" - po prostu odpowiadaj rzeczowo.
-        4. Jeśli brakuje informacji w kontekście, napisz wprost: "Na podstawie dostępnych fragmentów OWU nie mogę odpowiedzieć na to pytanie."
-        5. Zachowuj oryginalną terminologię z OWU.
+        4. Jeśli brakuje informacji w kontekście, napisz wprost: "Na podstawie dostępnych mi danych, nie mogę odpowiedzieć na to pytanie."
+        5. Zachowuj oryginalną terminologię z poniższych fragmentów.
         
         FRAGMENTY OWU DO ANALIZY:
-
         {context_text}
-
-        PAMIĘTAJ:
-        - Odpowiadaj konkretnie
-        - Nie pomijaj istotnych szczegółów
-        - Na podstawie TYLKO treści OWU"""
+        """
 
     def _truncate_contexts(self, contexts: List[Chunk]) -> List[Chunk]:
         total_chars = sum(len(ctx.text) for ctx in contexts)

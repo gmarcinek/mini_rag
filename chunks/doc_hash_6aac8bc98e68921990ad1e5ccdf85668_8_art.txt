@@ -1,6 +1,8 @@
-KONTEKST: Rozdział I > Artykuł 1
-SEKCJA: art 1
---------------------------------------------------------------------------------
+[Rozdział III, Artykuł 9]
+Artykuł 9.
+Prawa Ubezpieczającego wynikające z Umowy 
+1. Z zastrzeżeniem praw Ubezpieczonego, Współubezpieczonego lub Uposażonego określonych Umową oraz bezwzględnie obowiązującymi przepisami prawa wszelkie prawa z tytułu Umowy przysługują Ubezpieczającemu. 
+2. W przypadku śmierci Ubezpieczającego, który jest inną osobą niż Ubezpieczony, wszelkie jego prawa i obowiązki, które wynikają z Umowy, przechodzą na jego spadkobierców. 
+3. W przypadku ustania Ubezpieczającego, który jest osobą prawną lub jednostką organizacyjną nieposiadającą osobowości prawnej, wszelkie jego prawa i obowiązki wynikające z Umowy przechodzą na jego następców prawnych. 
 
-Artykuł 1.
-Wstęp Niniejsze OWU mają zastosowanie do Umowy Indywidualne terminowe ubezpieczenie na życie zawartej pomiędzy Towarzystwem a Ubezpieczającym. Są one integralną częścią umowy ubezpieczenia i dokumentem wiążącym strony. 
+WYJAŚNIENIE: Określenie „ustanie Ubezpieczającego, który jest osobą prawną lub jednostką organizacyjną nieposiadającą osobowości prawnej” oznacza np. likwidację, upadłość, rozwiązanie spółki.

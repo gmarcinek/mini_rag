@@ -20,43 +20,49 @@ class LegalChunk:
     subtype: str = ""
     original_marker: Optional[Dict] = None
     
-    def get_full_context_str(self) -> str:
-        """Zwraca sformatowany string z pełną ścieżką kontekstu."""
+    def get_full_context_str(self):
+        """
+        Zwraca pełny kontekst jako string do wyświetlenia w nagłówku chunka.
+        Na przykład: "Rozdział II, Artykuł 4"
+        """
+        if not self.context_path:
+            return ""
+        
         context_parts = []
         for ctx in self.context_path:
-            section_type = ctx['type']
-            name = ctx['name']
-            subtype = ctx.get('subtype', '')
-            
-            # Formatowanie w zależności od typu sekcji
-            if section_type == 'rozdzial':
-                formatted = f"Rozdział {name}"
-            elif section_type == 'art':
-                formatted = f"Artykuł {name}"
-            elif section_type == 'paragraf':
-                formatted = f"§ {name}"
-            elif section_type == 'ustep':
-                formatted = f"Ustęp {name}"
-            elif section_type == 'punkt':
-                # Formatowanie w zależności od podtypu punktu
-                if subtype == 'literowy punkt':
-                    formatted = f"{name})"
-                elif subtype == 'punkt':
-                    formatted = f"{name})"
-                elif subtype == 'podpunkt':
-                    formatted = f"{name})"
-                elif subtype == 'wyliczenie':
-                    formatted = f"- {name}"
-                elif subtype == 'stopniowy punkt':
-                    formatted = f"{name}°"
-                else:
-                    formatted = f"{name})"
+            # Obsługa zarówno starego (type/name) jak i nowego (category/number) formatu
+            if 'category' in ctx:
+                section_type = ctx['category']
+                section_name = ctx['number']
             else:
-                formatted = f"{section_type.capitalize()} {name}"
+                # Fallback do starego formatu dla kompatybilności
+                section_type = ctx.get('type', '')
+                section_name = ctx.get('name', '')
             
-            context_parts.append(formatted)
+            # Tłumaczenie typów na bardziej czytelne nazwy (dla starego formatu)
+            type_mapping = {
+                'rozdzial': 'Rozdział',
+                'art': 'Artykuł',
+                'paragraf': 'Paragraf',
+                'ustep': 'Ustęp',
+                'zalacznik': 'Załącznik',
+                'sekcja': 'Sekcja',
+                'owu': 'OWU',
+                'definicje': 'Definicje',
+                'postanowienia': 'Postanowienia',
+                'punkt': 'Punkt'
+            }
+            
+            if section_type in type_mapping:
+                section_type = type_mapping[section_type]
+            
+            # Dodajemy tytuł sekcji, jeśli jest dostępny (tylko dla nowego formatu)
+            if 'title' in ctx and ctx['title']:
+                context_parts.append(f"{section_type} {section_name} ({ctx['title']})")
+            else:
+                context_parts.append(f"{section_type} {section_name}")
         
-        return " > ".join(context_parts)
+        return ", ".join(context_parts)
 
 
 class HierarchicalLegalChunker:
@@ -98,29 +104,6 @@ class HierarchicalLegalChunker:
         chunk_id = 0
         
         
-        # 3. Tworzymy chunki dla rozdziałów (jako całość)
-        chapters = analyzer.get_sections_by_type('rozdzial')
-        for chapter in chapters:
-            chapter_id = chapter['id']
-            chapter_start, chapter_end = chapter['line'], chapter['content_end']
-            chapter_text = "\n".join(lines[chapter_start:chapter_end])
-                
-            context_path = analyzer.build_context_path(chapter_id)
-            
-            chunk = LegalChunk(
-                text=chapter_text,
-                section_type='rozdzial',
-                section_id=chapter_id,
-                doc_id=doc_id,
-                chunk_id=chunk_id,
-                context_path=context_path,
-                line_start=chapter_start,
-                line_end=chapter_end,
-                original_marker=chapter
-            )
-            chunks.append(chunk)
-            chunk_id += 1
-        
         # 1. Tworzymy chunki dla artykułów (jako całość)
         articles = analyzer.get_sections_by_type('art')
         for article in articles:
@@ -145,43 +128,8 @@ class HierarchicalLegalChunker:
             )
             chunks.append(chunk)
             chunk_id += 1
-            
-            # 2. Tworzymy chunki dla punktów w artykule
-            # Znajdujemy wszystkie punkty, które są dziećmi tego artykułu
-            point_children = [
-                marker for marker in analyzer.section_markers 
-                if marker['type'] == 'punkt' and 
-                analyzer.create_child_to_parent_map().get(marker['id']) == art_id
-            ]
-            
-            for point in point_children:
-                point_id = point['id']
-                point_start, point_end = point['line'], point['content_end']
-                
-                # Budujemy ścieżkę kontekstu dla punktu
-                point_context = analyzer.build_context_path(point_id)
-                
-                # Treść punktu
-                point_text = "\n".join(lines[point_start:point_end])
-                
-                chunk = LegalChunk(
-                    text=point_text,
-                    section_type='punkt',
-                    section_id=point_id,
-                    doc_id=doc_id,
-                    chunk_id=chunk_id,
-                    context_path=point_context,
-                    line_start=point_start,
-                    line_end=point_end,
-                    subtype=point.get('subtype', ''),
-                    original_marker=point
-                )
-                chunks.append(chunk)
-                chunk_id += 1
         
-        
-        
-        # 4. Uwzględniamy pozostałe typy sekcji
+        # 2. Uwzględniamy pozostałe typy sekcji
         for section_type in ['paragraf', 'ustep', 'sekcja']:
             sections = analyzer.get_sections_by_type(section_type)
             for section in sections:
@@ -227,7 +175,7 @@ class HierarchicalLegalChunker:
             filepath = self.chunks_dir / filename
             
             # Dodajemy nagłówek z kontekstem
-            context_header = f"KONTEKST: {chunk.get_full_context_str()}\n"
+            context_header = f"[{chunk.get_full_context_str()}]\n"
             
             # Formatujemy nazwę sekcji odpowiednio
             if chunk.section_type == 'punkt' and chunk.subtype:
@@ -247,9 +195,6 @@ class HierarchicalLegalChunker:
             else:
                 # Dla innych typów sekcji, pobierz nazwę z ID (np. 'art_1' -> '1')
                 section_display = chunk.section_id.split('_', 1)[1] if '_' in chunk.section_id else chunk.section_id
-            
-            context_header += f"SEKCJA: {chunk.section_type} {section_display}\n"
-            context_header += "-" * 80 + "\n\n"
             
             # Zapisujemy tekst z nagłówkiem kontekstu
             with open(filepath, 'w', encoding='utf-8') as f:
