@@ -7,8 +7,8 @@ from src.documents.similarity import DocumentSimilarity
 class SemanticRetriever:
     def __init__(self,
                 embedder: PolishLegalEmbedder,
-                min_score_threshold: float = 0.80,
-                max_top_k: int = 10):
+                min_score_threshold: float = 0.40,
+                max_top_k: int = 2):
         self.embedder = embedder
         self.min_score_threshold = min_score_threshold
         self.max_top_k = max_top_k
@@ -44,7 +44,7 @@ class SemanticRetriever:
         
         if is_broad_query:
             base_min_score = 0.45
-            effective_top_k = 10
+            effective_top_k = 3
             print("Wykryto zapytanie wymagające szerokiego kontekstu")
         else:
             base_min_score = min_score if min_score is not None else self.min_score_threshold
@@ -98,7 +98,7 @@ class SemanticRetriever:
         
         complexity = self._calculate_query_complexity(query)[0]
         adjustment = 0.1 * (1 - complexity)
-        return min(max(base_score + adjustment, 0.5), 0.8)
+        return min(max(base_score + adjustment, 0.4), 0.7)
 
     def _get_optimal_top_k(self, similarities: List[Tuple[int, float]], min_results: int = 3) -> int:
         if not similarities:

@@ -15,14 +15,20 @@ class BaseCache(ABC):
         self.embeddings_dir = self.cache_dir / "embeddings"
         self.embeddings_dir.mkdir(exist_ok=True)
         self.chunks_info_path = self.cache_dir / "chunks_info.json"
-    
+
+    def _text_hash(self, text: str) -> str:
+        return hashlib.md5(text.encode()).hexdigest()
+
     def get_embedding(self, text: str, embedder: PolishLegalEmbedder) -> np.ndarray:
         """Get embedding for text, using cache if available."""
-        text_hash = hashlib.md5(text.encode()).hexdigest()
+        text_hash = self._text_hash(text)
         embedding_path = self.embeddings_dir / f"{text_hash}.npy"
 
         if embedding_path.exists():
-            return np.load(embedding_path)
+            try:
+                return np.load(embedding_path)
+            except Exception as e:
+                print(f"Błąd odczytu {embedding_path}: {e}, regeneruję...")
 
         print(f"Generating new embedding for text: {text[:50]}...")
         embedding = embedder.get_embedding(text)
@@ -32,40 +38,46 @@ class BaseCache(ABC):
     def save_cache(self, documents: List[LegalChunk], embeddings: List[np.ndarray]) -> None:
         """
         Zapisuje chunki i ich embeddingi w cache z pełnym kontekstem strukturalnym.
-        
-        Args:
-            documents: Lista obiektów LegalChunk
-            embeddings: Lista odpowiadających embeddingów numpy
         """
+        existing_chunk_ids = set()
         chunks_info = []
+
+        # Wczytaj istniejące dane (jeśli są)
+        if self.chunks_info_path.exists():
+            try:
+                with self.chunks_info_path.open('r', encoding='utf-8') as f:
+                    existing_chunks = json.load(f)
+                    for chunk_data in existing_chunks:
+                        existing_chunk_ids.add(chunk_data['chunk_id'])
+                        chunks_info.append(chunk_data)
+            except Exception as e:
+                print(f"Error reading existing cache: {e}")
+                self.clear_cache()
+                chunks_info = []
+
+        # Dodaj nowe
         for chunk, embedding in zip(documents, embeddings):
-            embedding_hash = self._calculate_hash(embedding)
-            
-            # Zapisz embedding jeśli nie istnieje
-            np_path = self.embeddings_dir / f"{embedding_hash}.npy"
+            if chunk.chunk_id in existing_chunk_ids:
+                continue  # Pomijamy duplikaty
+
+            text_hash = self._text_hash(chunk.text)
+            np_path = self.embeddings_dir / f"{text_hash}.npy"
             if not np_path.exists():
                 np.save(np_path, embedding)
-            
-            # Tworzenie rozszerzonej struktury JSON z pełnym kontekstem
+
             chunk_info = {
-                # Podstawowe informacje o chunku
                 "text": chunk.text,
                 "doc_id": chunk.doc_id,
                 "chunk_id": chunk.chunk_id,
-                "embedding_hash": embedding_hash,
-                
-                # Informacje strukturalne
+                "embedding_hash": text_hash,
                 "section_type": chunk.section_type,
                 "section_id": chunk.section_id,
                 "line_start": chunk.line_start,
                 "line_end": chunk.line_end,
-                
-                # Pełny kontekst hierarchiczny
                 "context_path": chunk.context_path,
             }
-            
             chunks_info.append(chunk_info)
-        
+
         try:
             with self.chunks_info_path.open('w', encoding='utf-8') as f:
                 json.dump(chunks_info, f, ensure_ascii=False, indent=2)
@@ -76,9 +88,6 @@ class BaseCache(ABC):
     def load_cache(self) -> Tuple[List[LegalChunk], List[np.ndarray]]:
         """
         Ładuje chunki i ich embeddingi z cache.
-        
-        Returns:
-            Krotka (lista chunków, lista embeddingów)
         """
         if not self.chunks_info_path.exists():
             return [], []
@@ -90,7 +99,6 @@ class BaseCache(ABC):
             documents = []
             embeddings = []
             for chunk_data in chunks_data:
-                # Tworzenie obiektu LegalChunk z pełnymi danymi
                 chunk = LegalChunk(
                     text=chunk_data['text'],
                     doc_id=chunk_data['doc_id'],
@@ -101,15 +109,19 @@ class BaseCache(ABC):
                     line_start=chunk_data.get('line_start', 0),
                     line_end=chunk_data.get('line_end', 0)
                 )
-                
-                # Ładowanie embeddingu
+
                 embedding_path = self.embeddings_dir / f"{chunk_data['embedding_hash']}.npy"
                 if embedding_path.exists():
-                    embedding = np.load(embedding_path)
-                    documents.append(chunk)
-                    embeddings.append(embedding)
-                    print(f"Loaded cached chunk and embedding for doc_id: {chunk.doc_id}, chunk_id: {chunk.chunk_id}")
-                
+                    try:
+                        embedding = np.load(embedding_path)
+                        documents.append(chunk)
+                        embeddings.append(embedding)
+                        print(f"Loaded cached chunk and embedding for doc_id: {chunk.doc_id}, chunk_id: {chunk.chunk_id}")
+                    except Exception as e:
+                        print(f"Nie można załadować embeddingu {embedding_path}: {e}")
+                else:
+                    print(f"Brak embeddingu: {embedding_path}, pomijam chunk {chunk.chunk_id}")
+
             return documents, embeddings
         except Exception as e:
             print(f"Error loading cache: {e}")
@@ -122,6 +134,3 @@ class BaseCache(ABC):
             self.chunks_info_path.unlink()
         for file in self.embeddings_dir.glob("*.npy"):
             file.unlink()
-
-    def _calculate_hash(self, data: np.ndarray) -> str:
-        return hashlib.md5(data.tobytes()).hexdigest()

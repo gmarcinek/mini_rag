@@ -20,8 +20,8 @@ class MiniRAG:
             cache_dir: str = "cache", 
             chunker: SimpleTextSplitter = None, 
             generator_model: str = "llama3.2",
-            min_score_threshold: float = 0.8,
-            max_top_k: int = 10,
+            min_score_threshold: float = 0.5,
+            max_top_k: int = 3,
             max_context_length: int = 32000):
 
         self.embedder = PolishLegalEmbedder(use_gpu=use_gpu)

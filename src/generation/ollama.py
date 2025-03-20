@@ -54,7 +54,7 @@ class OllamaGenerator:
     
     def _get_generation_config(self, max_tokens: int) -> dict:
         return {
-            "temperature": 0.3,
+            "temperature": 0,
             "num_predict": max_tokens,
         }
 
