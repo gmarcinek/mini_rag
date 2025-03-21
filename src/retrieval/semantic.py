@@ -7,8 +7,8 @@ from src.documents.similarity import DocumentSimilarity
 class SemanticRetriever:
     def __init__(self,
                 embedder: PolishLegalEmbedder,
-                min_score_threshold: float = 0.7,
-                max_top_k: int = 5):
+                min_score_threshold: float = 0.6,
+                max_top_k: int = 10):
         self.embedder = embedder
         self.min_score_threshold = min_score_threshold
         self.max_top_k = max_top_k

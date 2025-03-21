@@ -7,15 +7,16 @@ from src.chunking import Chunk, SimpleTextSplitter
 from src.embeddings import PolishLegalEmbedder
 from src.cache import BaseCache
 from src.retrieval.semantic import SemanticRetriever
-from src.generation.ollama import OllamaGenerator
+from src.generation.anthropic import AnthropicGenerator
 import requests
+import anthropic
 
 class LegalRAGPipeline:
     """
     Pełny pipeline RAG zoptymalizowany dla dokumentów prawnych.
     Integruje wszystkie usprawnione komponenty:
     - SemanticRetriever z poprawioną metryką podobieństwa
-    - OllamaGenerator z lepszą obsługą długich kontekstów
+    - AnthropicGenerator z lepszą obsługą długich kontekstów
     """
     
     def __init__(self, 
@@ -26,7 +27,7 @@ class LegalRAGPipeline:
                  generator_model: str = "llama3.2",
                  ollama_url: str = "http://localhost:11434",
                  min_score_threshold: float = 0.6,
-                 max_top_k: int = 5,
+                 max_top_k: int = 10,
                  max_context_length: int = 32000,
                  debug_mode: bool = False):
         
@@ -54,10 +55,10 @@ class LegalRAGPipeline:
         # Inicjalizacja generatora
         if self.debug_mode:
             print(f"Inicjalizacja generatora z modelem {generator_model}...")
-        self.generator = OllamaGenerator(
-            model_name=generator_model,
-            base_url=ollama_url,
-            max_context_length=max_context_length
+        self.generator = AnthropicGenerator(
+            # model_name=generator_model,
+            # base_url=ollama_url,
+            # max_context_length=max_context_length
         )
         
         # Inicjalizacja chunkera
@@ -422,11 +423,11 @@ class LegalRAGPipeline:
         z powyższych części. Usuń powtórzenia i połącz informacje logicznie.
         """
         
-        consolidated_answer = self._call_ollama(
+        consolidated_answer = self._call_anthropic(
             prompt=consolidation_prompt,
             system_prompt=system_prompt,
-            temperature=0.4,
-            max_tokens=4000,
+            temperature=0.1,
+            max_tokens=8000,
             timeout=60
         )
         
@@ -439,7 +440,7 @@ class LegalRAGPipeline:
     def query_large_context(self, question: str, top_k: Optional[int] = None, 
                        min_score: Optional[float] = None, 
                        batch_size: int = 2,
-                       max_batches: int = 8,
+                       max_batches: int = 16,
                        retrieved_chunks: Optional[List[Tuple[Chunk, float]]] = None) -> Dict[str, Any]:
         """
         Wersja metody query obsługująca duże zestawy chunków poprzez przetwarzanie wsadowe.
@@ -527,6 +528,47 @@ class LegalRAGPipeline:
         result["total_time"] = time.time() - start_time
         
         return result
+    
+    def _call_anthropic(self, 
+                   prompt: str, 
+                   system_prompt: str,
+                   temperature: float = 0, 
+                   max_tokens: int = 4000, 
+                   timeout: int = 30) -> str:
+        """
+        Pomocnicza metoda do wykonywania zapytań do API Anthropic.
+        """
+        try:
+            # Inicjalizacja klienta Anthropic
+            from dotenv import load_dotenv
+            import anthropic
+            
+            load_dotenv()  # Załaduj zmienne środowiskowe z .env
+            client = anthropic.Client(api_key=os.getenv('ANTHROPIC_API_KEY'))
+            
+            # Jeśli nie ma klucza API, zwróć pusty ciąg znaków
+            if not os.getenv('ANTHROPIC_API_KEY'):
+                print("Błąd: Brak klucza API Anthropic w zmiennych środowiskowych")
+                return ""
+            
+            # Wywołanie API za pomocą klienta
+            message = client.messages.create(
+                model=self.generator.model,
+                max_tokens=max_tokens,
+                temperature=temperature,
+                system=system_prompt,
+                messages=[
+                    {"role": "user", "content": prompt}
+                ],
+                timeout=timeout
+            )
+            
+            # Pobierz tekst z odpowiedzi
+            return message.content[0].text
+                
+        except Exception as e:
+            print(f"Wyjątek podczas zapytania do Anthropic: {str(e)}")
+            return ""
     
     def _call_ollama(self, 
                     prompt: str, 

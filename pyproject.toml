@@ -20,7 +20,8 @@ dependencies = [
     "huggingface-hub (>=0.29.3,<0.30.0)",
     "python-dotenv (>=1.0.1,<2.0.0)",
     "sacremoses (>=0.1.1,<0.2.0)",
-    "protobuf (>=6.30.1,<7.0.0)"
+    "protobuf (>=6.30.1,<7.0.0)",
+    "anthropic (>=0.49.0,<0.50.0)"
 ]
 
 [tool.poetry.scripts]

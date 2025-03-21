@@ -1,22 +1,46 @@
 from typing import List, Dict, Any, Optional, Tuple
-import requests
 import time
+import os
 from src.chunking import Chunk
+from dotenv import load_dotenv
+import anthropic
 
-class OllamaGenerator:
+class AnthropicGenerator:
     def __init__(self, 
-                 model_name: str = "llama3.2", 
-                 base_url: str = "http://localhost:11434",
-                 timeout: int = 30,
-                 max_context_length: int = 32000,
+                 model_name: str = "claude-3-7-sonnet-20250219", 
+                 max_context_length: int = 200000,
                  retry_attempts: int = 3,
-                 retry_delay: int = 2):
+                 retry_delay: int = 2,
+                 api_key: str = None):
         self.model = model_name
-        self.base_url = base_url.rstrip('/')
-        self.base_timeout = timeout
-        self.max_context_length = max_context_length
+        self.api_key = api_key
+        self.base_timeout = 30
+        self.max_context_length = max_context_length  # Claude 3.7 Sonnet ma większy kontekst niż Ollama
         self.retry_attempts = retry_attempts
         self.retry_delay = retry_delay
+        
+        # Załaduj zmienne środowiskowe
+        load_dotenv()
+        
+        # Inicjalizacja klienta tylko w razie potrzeby
+        self._client = None
+
+    @property
+    def client(self):
+        """Leniwa inicjalizacja klienta Anthropic"""
+        if self._client is None:
+            # Najpierw sprawdź bezpośredni klucz API
+            api_key = self.api_key
+            
+            # Jeśli nie istnieje, użyj zmiennej środowiskowej
+            if not api_key:
+                api_key = os.getenv('ANTHROPIC_API_KEY')
+                
+            # Utwórz klienta jeśli mamy klucz API
+            if api_key:
+                self._client = anthropic.Client(api_key=api_key)
+                
+        return self._client
 
     def generate(self, query: str, contexts: List[Chunk], max_tokens: int = 4000) -> Dict[str, Any]:
         """
@@ -30,8 +54,16 @@ class OllamaGenerator:
         Returns:
             Słownik zawierający wygenerowaną odpowiedź i metadane
         """
+        # Sprawdź, czy możemy zainicjalizować klienta
+        if not self.client:
+            return {
+                "answer": "Brak klucza API Anthropic. Nie można wygenerować odpowiedzi.",
+                "sources": [],
+                "error": "Brak klucza API Anthropic",
+                "processing_time": 0
+            }
+            
         system_prompt = self._format_system_prompt(contexts)
-        config = self._get_generation_config(max_tokens)
         
         # Dynamiczne dostosowanie timeoutu w zależności od rozmiaru kontekstu i max_tokens
         dynamic_timeout = self._calculate_dynamic_timeout(contexts, max_tokens)
@@ -48,16 +80,15 @@ class OllamaGenerator:
         start_time = time.time()
         
         try:
-            response = self._make_api_request(
-                query=query,
+            answer = self._call_anthropic(
+                prompt=f"Odpowiedz na postawione pytanie zwięźle i merytorycznie: {query}",
                 system_prompt=system_prompt,
-                config=config,
+                temperature=0,
+                max_tokens=max_tokens,
                 timeout=dynamic_timeout
             )
             
-            if isinstance(response, dict) and "response" in response:
-                answer = response["response"]
-                
+            if answer:
                 # Sprawdź, czy odpowiedź nie jest ucięta
                 if self._is_truncated_response(answer):
                     continuation = self._generate_continuation(query, answer, prioritized_contexts)
@@ -67,7 +98,7 @@ class OllamaGenerator:
                 result["answer"] = answer
                 result["sources"] = self._extract_sources_from_contexts(prioritized_contexts, answer)
             else:
-                result["error"] = f"Nieoczekiwana odpowiedź API: {response}"
+                result["error"] = "Brak odpowiedzi z API Anthropic"
                 
         except Exception as e:
             result["error"] = f"Wystąpił błąd podczas generowania odpowiedzi: {str(e)}"
@@ -76,48 +107,56 @@ class OllamaGenerator:
         
         return result
     
-    def _make_api_request(self, query: str, system_prompt: str, config: dict, timeout: int) -> Dict[str, Any]:
+    def _call_anthropic(self, 
+                    prompt: str, 
+                    system_prompt: str,
+                    temperature: float = 0, 
+                    max_tokens: int = 4000, 
+                    timeout: int = 30) -> str:
         """
-        Wykonuje zapytanie do API Ollama z obsługą ponowień w przypadku błędów.
+        Pomocnicza metoda do wykonywania zapytań do API Anthropic z użyciem oficjalnego klienta.
         """
-        prompt = f"Odpowiedz na postawione pytanie zwięźle i merytorycznie: {query}"
-        
+        if not self.client:
+            print("Ostrzeżenie: Brak klucza API Anthropic. Generator zwróci pustą odpowiedź.")
+            return ""
+            
         for attempt in range(self.retry_attempts):
             try:
-                response = requests.post(
-                    f"{self.base_url}/api/generate",
-                    json={
-                        "model": self.model,
-                        "prompt": prompt,
-                        "stream": False,
-                        "system": system_prompt,
-                        "options": config
-                    },
+                # Wywołanie API Anthropic za pomocą oficjalnego klienta
+                message = self.client.messages.create(
+                    model=self.model,
+                    max_tokens=max_tokens,
+                    temperature=temperature,
+                    system=system_prompt,
+                    messages=[
+                        {"role": "user", "content": prompt}
+                    ],
                     timeout=timeout
                 )
                 
-                if response.status_code == 200:
-                    return response.json()
+                # Pobierz tekst z odpowiedzi
+                return "".join([block.text for block in message.content if block.type == "text"])
                 
-                if response.status_code == 404:
-                    return {"response": f"Model {self.model} nie został znaleziony."}
-                    
+            except anthropic.APITimeoutError:
                 if attempt < self.retry_attempts - 1:
                     time.sleep(self.retry_delay)
-                    
-            except (requests.exceptions.Timeout, requests.exceptions.ConnectionError):
+                else:
+                    print(f"Timeout podczas zapytania do Anthropic API")
+                    return ""
+            except anthropic.APIError as e:
                 if attempt < self.retry_attempts - 1:
                     time.sleep(self.retry_delay)
+                else:
+                    print(f"Błąd API Anthropic: {str(e)}")
+                    return ""
+            except Exception as e:
+                if attempt < self.retry_attempts - 1:
+                    time.sleep(self.retry_delay)
+                else:
+                    print(f"Wyjątek podczas zapytania do Anthropic: {str(e)}")
+                    return ""
         
-        return {"response": "Nie udało się uzyskać odpowiedzi z modelu po kilku próbach."}
-    
-    def _get_generation_config(self, max_tokens: int) -> dict:
-        return {
-            "temperature": 0,
-            "num_predict": max_tokens,
-            "top_p": 0.9,
-            "top_k": 40,
-        }
+        return ""
 
     def _format_system_prompt(self, contexts: List[Chunk]) -> str:
         if not isinstance(contexts, list):
@@ -209,12 +248,13 @@ class OllamaGenerator:
     def _calculate_dynamic_timeout(self, contexts: List[Chunk], max_tokens: int) -> int:
         """
         Oblicza dynamiczny timeout w zależności od rozmiaru kontekstu i liczby tokenów.
+        Claude może być szybszy niż Ollama, ale wciąż potrzebuje odpowiedniego timeoutu
         """
-        # Szacuj, że generowanie 1000 tokenów zajmuje około 5 sekund
+        # Szacuj, że generowanie 1000 tokenów zajmuje około 3 sekundy
         context_size = sum(len(ctx.text) for ctx in contexts)
         # Zakładamy, że średnio 4 znaki to 1 token
         estimated_context_tokens = context_size / 4
-        estimated_response_time = (estimated_context_tokens / 1000 * 2) + (max_tokens / 1000 * 5)
+        estimated_response_time = (estimated_context_tokens / 1000 * 1) + (max_tokens / 1000 * 3)
         
         # Minimum 10 sekund, maksimum 120 sekund
         return max(10, min(120, int(estimated_response_time) + self.base_timeout))
@@ -274,22 +314,32 @@ class OllamaGenerator:
             f"{previous_answer[-200:]}"  # Ostatnie 200 znaków jako kontekst
         )
         
-        config = self._get_generation_config(2000)  # Duży limit dla kontynuacji
         system_prompt = self._format_system_prompt(contexts)
         
         try:
-            response = self._make_api_request(
-                query=continuation_prompt,
+            continuation = self._call_anthropic(
+                prompt=continuation_prompt,
                 system_prompt=system_prompt,
-                config=config,
+                temperature=0,
+                max_tokens=2000,  # Duży limit dla kontynuacji
                 timeout=self.base_timeout * 2  # Podwójny timeout dla kontynuacji
             )
             
-            if isinstance(response, dict) and "response" in response:
-                continuation = response["response"]
+            if continuation:
                 return continuation.lstrip()  # Usuń początkowe białe znaki
                 
         except Exception:
             pass
             
         return ""  # Jeśli nie udało się wygenerować kontynuacji
+        
+    def export_to_json(self, filepath: str) -> None:
+        """
+        Eksportuje metadane dokumentów do pliku JSON.
+        
+        Args:
+            filepath: Ścieżka do pliku wyjściowego
+        """
+        # Ta metoda nie ma sensu w przypadku generatora, ale zostawiam ją dla kompatybilności,
+        # gdyby była wywoływana w kodzie kliencie
+        print(f"Metoda export_to_json nie jest zaimplementowana dla klasy AnthropicGenerator")

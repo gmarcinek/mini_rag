@@ -10,8 +10,7 @@ import numpy as np
 
 # Local
 from src.chunking import Chunk, SimpleTextSplitter
-from src.generation.ollama import OllamaGenerator
-from src.generation.ollama_text_fixer import OllamaTextFixer
+from src.generation.anthropic import AnthropicGenerator
 from src.cache import BaseCache
 from src.embeddings import PolishLegalEmbedder
 from src.retrieval.semantic import SemanticRetriever
@@ -27,8 +26,8 @@ class MiniRAG:
             cache_dir: str = "cache", 
             chunker: SimpleTextSplitter = None, 
             generator_model: str = "llama3.2",
-            min_score_threshold: float = 0.7,
-            max_top_k: int = 5,
+            min_score_threshold: float = 0.6,
+            max_top_k: int = 10,
             max_context_length: int = 32000,
             debug_mode: bool = False):
 
@@ -44,12 +43,11 @@ class MiniRAG:
             max_top_k=max_top_k
         )
         
-        self.generator = OllamaGenerator(
-            model_name=generator_model,
-            max_context_length=self.max_context_length
+        self.generator = AnthropicGenerator(
+            # model_name=generator_model,
+            # max_context_length=self.max_context_length
         )
         
-        self.text_fixer = OllamaTextFixer()
         self.chunker = chunker if chunker is not None else SimpleTextSplitter()
         
         # Wczytaj zapisane dokumenty i embeddingi

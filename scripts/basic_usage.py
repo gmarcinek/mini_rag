@@ -1,7 +1,6 @@
 from src.rag.pipeline import MiniRAG
 from src.rag.LegalRAGPipeline import LegalRAGPipeline
 from src.chunking.text_splitter import SimpleTextSplitter
-from src.chunking.legal_text_splitter import LegalTextSplitter, OllamaChunkTransformer
 from src.chunking.hierarchical_chunker import HierarchicalLegalChunker
 from pathlib import Path
 from src.analyzers.legal_text_structure_analyzer import LegalTextStructureAnalyzer
@@ -23,11 +22,6 @@ def main():
         print(f"Nieoczekiwany błąd: {e}")
         return
 
-    # Tworzymy transformer z Mistralem
-    transformer = OllamaChunkTransformer(model_name="llama3.2")
-
-    # Przekazujemy transformer do LegalTextSplitter
-    # chunker = LegalTextSplitter(
     chunker = HierarchicalLegalChunker()
 
     rag = LegalRAGPipeline(
